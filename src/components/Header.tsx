@@ -8,20 +8,18 @@ const Header = () => {
     useEffect(() => {
         const el = headerRef.current
         if (!el) return
-
         let lastScroll = 0
 
         const handleScroll = () => {
             const current = window.pageYOffset
+
             if (current <= 0) {
                 el.style.transform = 'translateY(0)'
                 lastScroll = current
                 return
             }
-            el.style.transform =
-                current > lastScroll && current > 100
-                    ? 'translateY(-100%)'
-                    : 'translateY(0)'
+
+            el.style.transform = current > lastScroll && current > 100 ? 'translateY(-100%)' : 'translateY(0)'
             lastScroll = current
         }
 
@@ -38,7 +36,6 @@ const Header = () => {
                 <Link to="/">Вадим Войцеховський</Link>
             </div>
             <nav className="nav-buttons">
-                {}
                 <div className="internship-badge">
                     Шукаю стажування
                 </div>

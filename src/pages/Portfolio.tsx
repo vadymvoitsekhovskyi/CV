@@ -18,6 +18,7 @@ const Portfolio = () => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setModalSrc(null)
         }
+
         window.addEventListener('keydown', handleKey)
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
@@ -25,11 +26,6 @@ const Portfolio = () => {
     return (
         <div className="page-portfolio">
             <main className="timeline-main">
-                <div className="git">
-                    <a href="https://github.com/vadim-x64" target="_blank" rel="noreferrer">
-                        <img src="/images/github.png" alt=""/>
-                    </a>
-                </div>
                 <div className="timeline-container">
                     <div className="timeline-line"></div>
                     <div className="timeline-section">
@@ -39,22 +35,14 @@ const Portfolio = () => {
                             <p className="section-subtitle">Документи про проходження курсів</p>
                             <div className="certificate-gallery">
                                 {CERTIFICATES.map((src, i) => (
-                                    <div
-                                        key={i}
-                                        className="certificate-card"
-                                        onClick={() => setModalSrc(src)}
-                                    >
+                                    <div key={i} className="certificate-card" onClick={() => setModalSrc(src)}>
                                         <img src={src} alt=""/>
-                                    </div>
-                                ))}
+                                    </div>))}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div
-                    className={`modal${modalSrc ? ' active' : ''}`}
-                    onClick={() => setModalSrc(null)}
-                >
+                <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
                     {modalSrc && <img src={modalSrc} alt=""/>}
                 </div>
             </main>

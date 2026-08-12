@@ -3,6 +3,16 @@
     transition: all 0.5s ease;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0s forwards;
+}
+
 .nav-buttons {
     display: flex;
     flex: 1;
@@ -22,50 +32,6 @@
     cursor: default;
     user-select: none;
     white-space: nowrap;
-}
-
-body.dark-theme .internship-badge {
-    background-color: #c8ff00;
-    color: #000000;
-}
-
-@media screen and (min-width: 769px) and (max-width: 1080px) {
-    .nav-buttons {
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 5px;
-    }
-
-    .internship-badge {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px;
-    }
-
-    .internship-badge {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 15px;
-        margin-top: 10px;
-    }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
-    opacity: 0;
-    animation: fadeIn 2s ease-out 0s forwards;
 }
 
 @keyframes fadeIn {
@@ -278,6 +244,11 @@ body.dark-theme .moon-icon {
     opacity: 1;
 }
 
+body.dark-theme .internship-badge {
+    background-color: #a2ff00;
+    color: #000000;
+}
+
 @media screen and (min-width: 1081px) and (max-width: 1200px) {
     .nav-buttons a:hover {
         transform: none;
@@ -289,8 +260,15 @@ body.dark-theme .moon-icon {
         border-right-color: #ffffff;
     }
 
+    .internship-badge {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
     .nav-buttons {
         flex-direction: column;
+        align-items: flex-end;
         padding: 5px;
     }
 
@@ -336,12 +314,12 @@ body.dark-theme .moon-icon {
 
     .nav-buttons {
         flex-direction: column;
+        align-items: flex-start;
         padding: 5px;
     }
 
     .nav-buttons a {
         padding: 10px 0;
-        margin-bottom: 5px;
         font-size: 20px;
         width: 100%;
         text-align: left;
@@ -349,6 +327,10 @@ body.dark-theme .moon-icon {
 
     .nav-buttons a:hover {
         transform: none;
+    }
+
+    .internship-badge {
+        margin: 10px auto;
     }
 
     main {

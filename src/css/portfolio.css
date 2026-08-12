@@ -1,7 +1,7 @@
 .git {
     position: absolute;
-    top: 200px;
-    right: 70px;
+    top: 0;
+    left: 0;
     background: #222;
     border-radius: 50%;
     width: 80px;
@@ -123,23 +123,12 @@ body.dark-theme .certificate-card img {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
-    .git {
-        top: 230px;
-    }
-
     .certificate-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 768px) {
-    .git {
-        top: 300px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-
     .git img {
         width: 40px;
         height: 40px;

@@ -1,3 +1,18 @@
+.full-width-resume {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width-resume img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
 .timeline-container {
     position: relative;
     max-width: 1440px;
@@ -34,7 +49,7 @@
     width: 30px;
     height: 30px;
     background-color: #eaeff8;
-    border: 6px solid #0097ff;
+    border: 6px solid #2E7D32;
     border-radius: 50%;
     transform: translate(-50%, 0);
     z-index: 2;
@@ -44,7 +59,7 @@
 
 .timeline-section:hover .timeline-dot {
     transform: translate(-50%, 0);
-    background-color: #0097ff;
+    background-color: #2E7D32;
 }
 
 .timeline-content {
@@ -117,7 +132,6 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-
     z-index: 2;
     transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 24px;
@@ -189,12 +203,6 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .project-card:hover .project-card-inner {
-        transform: rotateY(180deg);
-    }
 }
 
 .project-card-inner.flipped {
@@ -292,13 +300,6 @@
     z-index: 10;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .info-btn,
-    .close-flip-btn {
-        display: none;
-    }
-}
-
 .page-home .modal {
     display: none;
     position: fixed;
@@ -324,7 +325,7 @@
 
 .skills-carousel-section {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1000px;
     margin: 50px auto;
     display: flex;
     align-items: center;
@@ -585,11 +586,11 @@ body.dark-theme .timeline-line {
 
 body.dark-theme .timeline-dot {
     background-color: #28292a;
-    border-color: #3d8bff;
+    border-color: #a2ff00;
 }
 
 body.dark-theme .timeline-section:hover .timeline-dot {
-    background-color: #3d8bff;
+    background-color: #a2ff00;
 }
 
 body.dark-theme .section-title {
@@ -681,6 +682,19 @@ body.dark-theme .watery-sticker {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
     inset 0 4px 8px rgba(255, 255, 255, 0.2),
     inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover .project-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .info-btn,
+    .close-flip-btn {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1081px) and (max-width: 1200px) {

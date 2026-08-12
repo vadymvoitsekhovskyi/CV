@@ -7,6 +7,7 @@ const Profile = () => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setModalOpen(false)
         }
+
         window.addEventListener('keydown', handleKey)
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
