@@ -8,8 +8,8 @@ const Header = () => {
                     <span>Шукаю стажування</span>
                 </div>
                 <NavLink to="/">Головна</NavLink>
-                <NavLink to="/profile">Профіль</NavLink>
-                <NavLink to="/portfolio">Додатково</NavLink>
+                <NavLink to="/">Профіль</NavLink>
+                <NavLink to="/">Додатково</NavLink>
             </nav>
 
             <div className="name" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>

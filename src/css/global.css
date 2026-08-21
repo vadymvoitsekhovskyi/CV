@@ -182,14 +182,41 @@ body.dark-theme .moon-icon {
     opacity: 1;
 }
 
-@media (min-width: 1081px) and (max-width: 1200px) {
-
-}
-
-@media (min-width: 769px) and (max-width: 1080px) {
-
-}
-
 @media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 20px;
+        width: 100%;
+    }
 
+    .name {
+        text-align: left;
+        width: 100%;
+    }
+
+    .name a {
+        font-size: 36px;
+    }
+
+    .nav-buttons {
+        align-items: end;
+        width: 100%;
+    }
+
+    body.dark-theme .name a,
+    body.dark-theme .nav-buttons a,
+    body.dark-theme .internship-badge {
+        color: #ffffff;
+    }
+
+    body.dark-theme .internship-badge {
+        border-color: #ffffff;
+    }
+
+    body.dark-theme .internship-badge:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
 }
