@@ -15,23 +15,36 @@ body {
 
 .nav-buttons {
     display: flex;
-    flex: 1;
-    align-items: center;
+    flex-direction: column; /* Ставимо кнопки в стовпчик */
+    align-items: flex-start; /* Притискаємо до лівого краю */
+    flex: 0; /* Щоб не розтягувалось на весь вільний простір */
 }
 
 .internship-badge {
-    background-color: #2E7D32;
-    color: #ffffff;
-    padding: 5px 15px;
-    border-radius: 20px;
+    background-color: transparent;
+    color: #666666;
+    padding: 8px 20px; /* Трохи збільшив відступи, щоб форма виглядала краще */
+    border-radius: 0; /* Прибираємо заокруглення для гострих кутів */
+    border: 1px #666666 solid;
     font-size: 14px;
-    font-weight: bold;
+
     text-transform: uppercase;
-    margin-left: 50px;
-    margin-right: auto;
+    margin: 0 0 20px 10px; /* Додав трохи відступу зліва (10px) через нахил */
     cursor: default;
     user-select: none;
     white-space: nowrap;
+    transform: skew(-20deg); /* Нахиляємо весь блок */
+    transition: background-color 0.2s;
+}
+
+.internship-badge:hover {
+   background-color:  #666666;
+    color: #ffffff;
+}
+
+.internship-badge span {
+    display: inline-block;
+    transform: skew(20deg); /* Компенсуємо нахил контейнера */
 }
 
 @keyframes fadeIn {
@@ -53,33 +66,36 @@ main {
     margin-top: 100px;
 }
 
+/* Робимо вирівнювання по верхньому краю і задаємо відступи для всього хедера */
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-    background-color: #eaeff8;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
+    background-color: transparent;
+    border: none;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border: 5px solid #ffffff;
+    align-items: flex-start; /* Вирівнюємо по верху */
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .name {
-    padding: 50px 100px;
-    border-right: 5px solid #ffffff;
+    padding: 0; /* Прибираємо старі величезні відступи */
+    border-right: none;
+    text-align: right; /* Вирівнюємо текст вправо, ближче до краю екрана */
 }
 
 .name a {
-    font-size: 36px;
+    font-size: 92px; /* Збільшуємо шрифт (можеш підібрати під себе, наприклад 64px чи 80px) */
     font-weight: bold;
     text-decoration: none;
     color: #000000;
     position: relative;
     display: inline-block;
+    line-height: 1.1; /* Щоб рядки "Вадим" і "Войцеховський" стояли щільніше один до одного */
 }
 
 .santa-hat {
@@ -104,16 +120,17 @@ header {
 
 .nav-buttons a {
     text-decoration: none;
-    font-size: 24px;
-    padding: 40px 10px;
+    font-size: 18px;
+    padding: 10px 0;
     color: #000000;
     text-transform: uppercase;
     display: inline-block;
-    transition: transform 0.3s ease;
+    /* Додав color в transition для плавної зміни кольору */
+    transition: color 0.3s ease;
 }
 
 .nav-buttons a:hover {
-    transform: scaleX(1.1);
+    color: #003cff; /* Робимо текст сірим */
 }
 
 .foot {
@@ -210,20 +227,6 @@ header {
 
 body.dark-theme {
     background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);
-}
-
-body.dark-theme header {
-    background-color: #28292a;
-}
-
-body.dark-theme header,
-body.dark-theme .name {
-    border-color: #222222;
-}
-
-body.dark-theme .name a,
-body.dark-theme .nav-buttons a {
-    color: #ffffff;
 }
 
 body.dark-theme .nav-buttons a.current {

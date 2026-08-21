@@ -188,20 +188,17 @@ const Home = () => {
 
     return (
         <div className="page-home">
+            {/* Новий блок для фото на всю ширину поза таймлайном */}
+            <div className="hero-section">
+                <picture className="full-width-resume">
+                    <source media="(max-width: 768px)" srcSet="/images/profile_1.png"/>
+                    <img src="/images/profile.png" alt="Profile" />
+                </picture>
+            </div>
+
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-line"></div>
-                    <div className="timeline-section">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-content">
-                            <div className="content">
-                                <picture className="full-width-resume">
-                                    <source media="(max-width: 768px)" srcSet="/images/profile_1.png"/>
-                                    <img src="/images/profile.png" alt="..."/>
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
                     <div className="timeline-section">
                         <div className="timeline-dot"></div>
                         <div className="timeline-content">
