@@ -165,8 +165,8 @@ const Home = () => {
         <div className="page-home">
             <div className="hero-section">
                 <picture className="full-width-resume">
-                    <source media="(max-width: 768px)" srcSet="/assets/images/profile_mobile.png"/>
-                    <img src="/assets/images/profile.png" alt="..."/>
+                    <source media="(max-width: 768px)" srcSet="/images/profile_mobile.png"/>
+                    <img src="/images/profile.png" alt="..."/>
                 </picture>
                 <div className="hero-socials">
                     <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
