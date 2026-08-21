@@ -1,7 +1,7 @@
-import {useEffect, useRef, useState, useCallback} from 'react'
+import {useEffect, useRef, useState} from 'react'
 
-type Ball = { x: number; y: number; r: number; dx: number; dy: number }
-const SLIDES = ['Java', '.NET', 'JavaScript', 'Kotlin', 'AI', 'Dart', 'Python', 'C++', 'Docker', 'PostgreSQL', 'git/GitHub']
+// Трохи доповнений масив для плавної стрічки
+const SLIDES = ['Java', 'C#', 'JavaScript', 'React', 'Android', 'Kotlin', 'PostgreSQL', 'Docker', '.NET', 'git/GitHub']
 
 interface Project {
     img: string
@@ -128,11 +128,6 @@ const CopyBtn = ({text}: { text: string }) => {
 const Home = () => {
     const [modalSrc, setModalSrc] = useState<string | null>(null)
     const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>({})
-    const leftPhotoRef = useRef<HTMLDivElement>(null)
-    const canvasRef = useRef<HTMLCanvasElement>(null)
-    const sliderRef = useRef<HTMLDivElement>(null)
-    const currentIdx = useRef(1)
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
     const toggleFlip = (idx: number) => {
         setFlippedCards(prev => ({...prev, [idx]: !prev[idx]}))
@@ -147,64 +142,32 @@ const Home = () => {
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
 
-    const displaySlides = [SLIDES[SLIDES.length - 1], ...SLIDES, SLIDES[0]]
-
-    const goTo = useCallback((idx: number, animated = true) => {
-        const el = sliderRef.current
-        if (!el) return
-        el.style.transition = animated ? 'transform 0.5s ease-in-out' : 'none'
-        el.style.transform = `translateX(-${idx * 100}%)`
-        currentIdx.current = idx
-    }, [])
-
-    useEffect(() => {
-        goTo(1, false)
-
-        const el = sliderRef.current
-        if (!el) return
-
-        const onEnd = () => {
-            const i = currentIdx.current
-            if (i === 0) goTo(SLIDES.length, false)
-            else if (i === SLIDES.length + 1) goTo(1, false)
-        }
-
-        el.addEventListener('transitionend', onEnd)
-        return () => el.removeEventListener('transitionend', onEnd)
-    }, [goTo])
-
-    const prev = useCallback(() => goTo(currentIdx.current - 1), [goTo])
-    const next = useCallback(() => goTo(currentIdx.current + 1), [goTo])
-
-    useEffect(() => {
-        if (!isAutoPlaying) return
-
-        const interval = setInterval(() => {
-            next()
-        }, 3000)
-
-        return () => clearInterval(interval)
-    }, [isAutoPlaying, next])
+    const displaySlides = [...SLIDES, ...SLIDES, ...SLIDES, ...SLIDES]
 
     return (
         <div className="page-home">
-            {/* Новий блок для фото на всю ширину поза таймлайном */}
             <div className="hero-section">
                 <picture className="full-width-resume">
                     <source media="(max-width: 768px)" srcSet="/images/profile_1.png"/>
                     <img src="/images/profile.png" alt="Profile" />
                 </picture>
+
+                <div className="hero-socials">
+                    <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank" rel="noreferrer" className="hero-btn linkedin">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer" className="hero-btn github">
+                        GitHub
+                    </a>
+                </div>
             </div>
 
             <main className="timeline-main">
                 <div className="timeline-container">
-                    <div className="timeline-line"></div>
                     <div className="timeline-section">
-                        <div className="timeline-dot"></div>
                         <div className="timeline-content">
-                            <h2 className="section-title">Мої проєкти GitHub</h2>
-                            <p className="section-subtitle">Наведіть курсором на картку для
-                                деталей. Натисніть для детального перегляду фото.</p>
+                            <h2 className="section-title">Портфоліо</h2>
+                            <p className="section-subtitle">Наведіть курсором на картку для деталей. Натисніть для детального перегляду фото.</p>
                             <div className="home-projects">
                                 <div className="project-gallery">
                                     {PROJECTS.map((p, i) => (
@@ -233,30 +196,38 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="timeline-section">
-                        <div className="timeline-dot"></div>
                         <div className="timeline-content">
-                            <h2 className="section-title">Технології</h2>
-                            <p className="section-subtitle">Інструменти з якими працюю.</p>
-                            <div
-                                className="skills-carousel-section"
-                                onMouseEnter={() => setIsAutoPlaying(false)}
-                                onMouseLeave={() => setIsAutoPlaying(true)}>
-                                <button className="carousel-btn prev-btn" onClick={prev}>&lt;</button>
+
+                            <p className="section-subtitle instruments">Інструменти з якими працюю</p>
+
+                            <div className="skills-carousel-section full-width-marquee">
                                 <div className="carousel-viewport">
-                                    <div ref={sliderRef} className="carousel-track">
-                                        {displaySlides.map((s, i) => (
-                                            <div key={i} className="carousel-slide">
-                                                <h2>{s}</h2>
-                                            </div>))}
+                                    <div className="carousel-track marquee-track">
+                                        {/* Перший оригінальний блок */}
+                                        <div className="marquee-group">
+                                            {SLIDES.map((s, i) => (
+                                                <div key={`orig-${i}`} className="carousel-slide marquee-slide">
+                                                    <h2>{s}</h2>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        {/* Другий такий самий блок (копія) для ідеальної безшовності */}
+                                        <div className="marquee-group" aria-hidden="true">
+                                            {SLIDES.map((s, i) => (
+                                                <div key={`clone-${i}`} className="carousel-slide marquee-slide">
+                                                    <h2>{s}</h2>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                                <button className="carousel-btn next-btn" onClick={next}>&gt;</button>
                             </div>
                         </div>
                     </div>
+
                     <div className="timeline-section">
-                        <div className="timeline-dot"></div>
                         <div className="timeline-content">
                             <h2 className="section-title">Контактні дані</h2>
                             <p className="section-subtitle">Я на зв'язку.</p>
