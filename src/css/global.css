@@ -6,45 +6,11 @@
 body {
     margin: 0;
     padding: 0;
+    opacity: 0;
     overflow-y: scroll;
     overflow-x: hidden;
     background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
-    opacity: 0;
-    animation: fadeIn 2s ease-out 0s forwards;
-}
-
-.nav-buttons {
-    display: flex;
-    flex-direction: column; /* Ставимо кнопки в стовпчик */
-    align-items: flex-start; /* Притискаємо до лівого краю */
-    flex: 0; /* Щоб не розтягувалось на весь вільний простір */
-}
-
-.internship-badge {
-    background-color: transparent;
-    color: #666666;
-    padding: 8px 20px; /* Трохи збільшив відступи, щоб форма виглядала краще */
-    border-radius: 0; /* Прибираємо заокруглення для гострих кутів */
-    border: 1px #666666 solid;
-    font-size: 14px;
-
-    text-transform: uppercase;
-    margin: 0 0 20px 10px; /* Додав трохи відступу зліва (10px) через нахил */
-    cursor: default;
-    user-select: none;
-    white-space: nowrap;
-    transform: skew(-20deg); /* Нахиляємо весь блок */
-    transition: background-color 0.2s;
-}
-
-.internship-badge:hover {
-   background-color:  #666666;
-    color: #ffffff;
-}
-
-.internship-badge span {
-    display: inline-block;
-    transform: skew(20deg); /* Компенсуємо нахил контейнера */
+    animation: fadeIn 1s ease-out 0s forwards;
 }
 
 @keyframes fadeIn {
@@ -56,17 +22,6 @@ body {
     }
 }
 
-img {
-    pointer-events: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
-}
-
-main {
-    margin-top: 100px;
-}
-
-/* Робимо вирівнювання по верхньому краю і задаємо відступи для всього хедера */
 header {
     position: absolute;
     top: 0;
@@ -77,45 +32,41 @@ header {
     border: none;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Вирівнюємо по верху */
+    align-items: flex-start;
     padding: 50px;
     box-sizing: border-box;
 }
 
-.name {
-    padding: 0; /* Прибираємо старі величезні відступи */
-    border-right: none;
-    text-align: right; /* Вирівнюємо текст вправо, ближче до краю екрана */
-}
-
-.name a {
-    font-size: 96px; /* Збільшуємо шрифт (можеш підібрати під себе, наприклад 64px чи 80px) */
-    font-weight: bold;
-    text-decoration: none;
+.internship-badge {
+    background-color: transparent;
     color: #000000;
-    position: relative;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px #000000 solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 20px 10px;
+    cursor: default;
+    white-space: nowrap;
+    transform: skew(-20deg);
+    transition: background-color 0.2s ease;
+}
+
+.internship-badge:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.internship-badge span {
     display: inline-block;
-    line-height: 1.1; /* Щоб рядки "Вадим" і "Войцеховський" стояли щільніше один до одного */
+    transform: skew(20deg);
 }
 
-.santa-hat {
-    position: absolute;
-    width: 40px;
-    height: auto;
-    top: 40px;
-    left: 86px;
-    transform: rotate(-15deg);
-    pointer-events: auto;
-    z-index: 10;
-}
-
-.nav-buttons a.current {
-    color: #666666;
-    text-decoration: underline;
-}
-
-.nav-buttons a.current:hover {
-    transform: none;
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0;
 }
 
 .nav-buttons a {
@@ -125,47 +76,60 @@ header {
     color: #000000;
     text-transform: uppercase;
     display: inline-block;
-    /* Додав color в transition для плавної зміни кольору */
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .nav-buttons a:hover {
-    color: #003cff; /* Робимо текст сірим */
+    color: #003cff;
+}
+
+.name {
+    padding: 0;
+    border-right: none;
+    text-align: right;
+}
+
+.name a {
+    font-size: 96px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    display: inline-block;
 }
 
 .foot {
     z-index: 999;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-.theme-icon {
+.theme-icon, .scroll-to-top .material-icons {
+    position: absolute;
     font-size: 24px;
-    font-weight: bold;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #ffffff;
-    padding: 15px;
+    padding: 10px;
     border-radius: 50%;
-    position: absolute;
     transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
     pointer-events: none;
 }
 
-.theme-toggle:hover .theme-icon {
+.theme-toggle:hover .theme-icon, .scroll-to-top:hover .material-icons {
     color: #333333;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #ffffff;
 }
 
 .theme-toggle {
     position: relative;
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -183,8 +147,8 @@ header {
 }
 
 .scroll-to-top {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,41 +164,12 @@ header {
 }
 
 .scroll-to-top .material-icons {
-    font-size: 24px;
     font-weight: bold;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #ffffff;
-    padding: 15px;
-    border-radius: 50%;
     transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.scroll-to-top:hover .material-icons {
-    color: #333333;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.spoiler .watery-sticker {
-    top: -4px;
-    bottom: -4px;
-    left: 4px;
-    right: 4px;
-    border-radius: 200px !important;
-    border: none;
-    animation: morphDrop 4s linear infinite, glassShimmer 3s linear infinite !important;
 }
 
 body.dark-theme {
     background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);
-}
-
-body.dark-theme .nav-buttons a.current {
-    color: #666666;
-}
-
-body.dark-theme .theme-icon {
-    color: #ffffff;
 }
 
 body.dark-theme .sun-icon {
@@ -247,112 +182,14 @@ body.dark-theme .moon-icon {
     opacity: 1;
 }
 
-body.dark-theme .internship-badge {
-    background-color: #a2ff00;
-    color: #000000;
+@media (min-width: 1081px) and (max-width: 1200px) {
+
 }
 
-@media screen and (min-width: 1081px) and (max-width: 1200px) {
-    .nav-buttons a:hover {
-        transform: none;
-    }
-}
+@media (min-width: 769px) and (max-width: 1080px) {
 
-@media screen and (min-width: 769px) and (max-width: 1080px) {
-    body.dark-theme .name {
-        border-right-color: #ffffff;
-    }
-
-    .internship-badge {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        margin-bottom: 5px;
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    body.dark-theme .name {
-        border-right-color: #ffffff;
-    }
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 20px;
-    }
-
-    .name {
-        padding: 10px 5px;
-        margin-bottom: 10px;
-    }
-
-    .name a {
-        font-size: 24px;
-        margin-right: 10px;
-    }
-
-    .santa-hat {
-        width: 30px;
-        top: 22px;
-        left: 13px;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 0;
-        font-size: 20px;
-        width: 100%;
-        text-align: left;
-    }
-
-    .nav-buttons a:hover {
-        transform: none;
-    }
-
-    .internship-badge {
-        margin: 10px auto;
-    }
-
-    main {
-        margin-top: 250px;
-    }
-
-    .foot {
-        bottom: 10px;
-        right: 10px;
-        gap: 0;
-    }
-
-    .theme-icon {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .scroll-to-top .material-icons {
-        font-size: 18px;
-        padding: 10px;
-    }
 }

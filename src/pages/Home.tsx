@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState} from 'react'
 
-// Трохи доповнений масив для плавної стрічки
 const SLIDES = ['Java', 'C#', 'JavaScript', 'React', 'Android', 'Kotlin', 'PostgreSQL', 'Docker', '.NET', 'git/GitHub']
 
 interface Project {
@@ -142,42 +141,44 @@ const Home = () => {
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
 
-    const displaySlides = [...SLIDES, ...SLIDES, ...SLIDES, ...SLIDES]
-
     return (
         <div className="page-home">
             <div className="hero-section">
                 <picture className="full-width-resume">
-                    <source media="(max-width: 768px)" srcSet="/images/profile_1.png"/>
-                    <img src="/images/profile.png" alt="Profile" />
+                    <img src="/assets/images/profile.png" alt="..."/>
                 </picture>
-
                 <div className="hero-socials">
-                    <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank" rel="noreferrer" className="hero-btn linkedin">
+                    <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
+                       rel="noreferrer" className="hero-btn linkedin">
                         LinkedIn
                     </a>
-                    <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer" className="hero-btn github">
+                    <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer"
+                       className="hero-btn github">
                         GitHub
                     </a>
                 </div>
             </div>
-
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-section">
                         <div className="timeline-content">
                             <h2 className="section-title">Портфоліо</h2>
-                            <p className="section-subtitle">Наведіть курсором на картку для деталей. Натисніть для детального перегляду фото.</p>
+                            <p className="section-subtitle">
+                                Наведіть курсором на картку для деталей.
+                                Натисніть на картку для детального перегляду фото.
+                            </p>
                             <div className="home-projects">
                                 <div className="project-gallery">
                                     {PROJECTS.map((p, i) => (
                                         <div key={i} className="project-card">
-                                            <div className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`} onClick={() => setModalSrc(p.img)}>
+                                            <div className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`}
+                                                 onClick={() => setModalSrc(p.img)}>
                                                 <div className="project-card-front">
                                                     <img src={p.img} alt=""/>
                                                     <div className="info-btn" onClick={(e) => {
                                                         e.stopPropagation()
-                                                        toggleFlip(i)}}>
+                                                        toggleFlip(i)
+                                                    }}>
                                                         <span className="material-icons">info</span>
                                                     </div>
                                                 </div>
@@ -186,7 +187,8 @@ const Home = () => {
                                                     {p.description && <p>{p.description}</p>}
                                                     <div className="close-flip-btn" onClick={(e) => {
                                                         e.stopPropagation()
-                                                        toggleFlip(i)}}>
+                                                        toggleFlip(i)
+                                                    }}>
                                                         <span className="material-icons">close</span>
                                                     </div>
                                                 </div>
@@ -199,13 +201,10 @@ const Home = () => {
 
                     <div className="timeline-section">
                         <div className="timeline-content">
-
                             <p className="section-subtitle instruments">Інструменти з якими працюю</p>
-
                             <div className="skills-carousel-section full-width-marquee">
                                 <div className="carousel-viewport">
                                     <div className="carousel-track marquee-track">
-                                        {/* Перший оригінальний блок */}
                                         <div className="marquee-group">
                                             {SLIDES.map((s, i) => (
                                                 <div key={`orig-${i}`} className="carousel-slide marquee-slide">
@@ -213,7 +212,6 @@ const Home = () => {
                                                 </div>
                                             ))}
                                         </div>
-                                        {/* Другий такий самий блок (копія) для ідеальної безшовності */}
                                         <div className="marquee-group" aria-hidden="true">
                                             {SLIDES.map((s, i) => (
                                                 <div key={`clone-${i}`} className="carousel-slide marquee-slide">
@@ -226,67 +224,60 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <footer className="home-footer">
+                    <div className="footer-content">
+                        <div className="contact-info-blocks">
+                            <div className="info-block">
+                                <div className="icons-combined">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                         style={{color: '#0088cc'}}>
+                                        <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.787l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+                                    </svg>
+                                </div>
+                                <span>@vadymvoitsekhovskyi</span>
+                                <CopyBtn text="@vadymvoitsekhovskyi"/>
+                            </div>
 
-                    <div className="timeline-section">
-                        <div className="timeline-content">
-                            <h2 className="section-title">Контактні дані</h2>
-                            <p className="section-subtitle">Я на зв'язку.</p>
-                            <div className="home-footer-section">
-                                <div className="contact-info-blocks">
-                                    <div className="info-block">
-                                        <div className="icons-combined">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" style={{color: '#0088cc'}}>
-                                                <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.787l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
-                                            </svg>
-                                        </div>
-                                        <span>@vadymvoitsekhovskyi</span>
-                                        <CopyBtn text="@vadymvoitsekhovskyi"/>
-                                    </div>
-                                    <div className="info-block">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            width="24"
-                                            height="24"
-                                            fill="currentColor"
-                                            style={{color: '#5865F2'}}>
-                                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
-                                        </svg>
-                                        <span>@vadymvoitsekhovskyi</span>
-                                        <CopyBtn text="@vadymvoitsekhovskyi"/>
-                                    </div>
-                                    <div className="info-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                                             fill="currentColor" style={{color: '#4CAF50'}}>
-                                            <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/>
-                                        </svg>
-                                        <span>067 518 22 22</span>
-                                        <CopyBtn text="067 518 22 22"/>
-                                    </div>
-                                    <div className="info-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={{color: '#EA4335'}}>
-                                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
-                                        </svg>
-                                        <span>vadim.rolex.2005@gmail.com</span>
-                                        <CopyBtn text="vadim.rolex.2005@gmail.com"/>
-                                    </div>
-                                </div>
-                                <div className="social-links-blocks">
-                                    <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer" className="social-btn">
-                                        GitHub
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank" rel="noreferrer" className="social-btn">
-                                        LinkedIn
-                                    </a>
-                                </div>
+                            <div className="info-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
+                                     style={{color: '#4CAF50'}}>
+                                    <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/>
+                                </svg>
+                                <span>067 518 22 22</span>
+                                <CopyBtn text="067 518 22 22"/>
+                            </div>
+                            <div className="info-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                     style={{color: '#EA4335'}}>
+                                    <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                                </svg>
+                                <span>vadim.rolex.2005@gmail.com</span>
+                                <CopyBtn text="vadim.rolex.2005@gmail.com"/>
                             </div>
                         </div>
+                        <div className="social-links-blocks">
+                            <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer" className="social-btn">
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank" rel="noreferrer" className="social-btn">
+                                LinkedIn
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
-                    {modalSrc && <img src={modalSrc} alt=""/>}
-                </div>
+                    <div className="vault">
+                        <div className="footer-copyright">
+                            © {new Date().getFullYear()} Вадим Войцеховський
+                        </div>
+                        <div className="label-name">
+                            VOITSEKH
+                        </div>
+                    </div>
+                </footer>
             </main>
+            <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
+                {modalSrc && <img src={modalSrc} alt=""/>}
+            </div>
         </div>
     )
 }

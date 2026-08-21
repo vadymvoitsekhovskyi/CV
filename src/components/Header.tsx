@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -7,13 +7,13 @@ const Header = () => {
                 <div className="internship-badge">
                     <span>Шукаю стажування</span>
                 </div>
-                <Link to="/">Головна</Link>
-                <Link to="/profile">Профіль</Link>
-                <Link to="/portfolio">Додатково</Link>
+                <NavLink to="/">Головна</NavLink>
+                <NavLink to="/profile">Профіль</NavLink>
+                <NavLink to="/portfolio">Додатково</NavLink>
             </nav>
 
-            <div className="name">
-                <Link to="/">Вадим<br/>Войцеховський</Link>
+            <div className="name" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+                <NavLink to="/">Вадим<br/>Войцеховський</NavLink>
             </div>
         </header>
     )
