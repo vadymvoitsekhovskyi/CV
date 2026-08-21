@@ -14,6 +14,16 @@ const CERTIFICATES: string[] = [
 const Portfolio = () => {
     const [modalSrc, setModalSrc] = useState<string | null>(null)
 
+    const isMaintenance = true;
+    if (isMaintenance) {
+        return (
+            <div className="maintenance-container">
+                <h1>404</h1>
+                <p>Сторінка зараз на ремонті 😉</p>
+            </div>
+        )
+    }
+
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setModalSrc(null)

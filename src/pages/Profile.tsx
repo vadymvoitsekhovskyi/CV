@@ -3,6 +3,16 @@ import {useEffect, useState} from 'react'
 const Profile = () => {
     const [modalOpen, setModalOpen] = useState(false)
 
+    const isMaintenance = true;
+    if (isMaintenance) {
+        return (
+            <div className="maintenance-container">
+                <h1>404</h1>
+                <p>Сторінка зараз на ремонті 😉</p>
+            </div>
+        )
+    }
+
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setModalOpen(false)
