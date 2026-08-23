@@ -1,3 +1,64 @@
+.profile-split-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.profile-right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portrait-container {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.portrait-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border: 1px solid #000000;
+    pointer-events: none;
+}
+
+.portrait-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #b5b5b5;
+    overflow: hidden;
+}
+
+.portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease;
+}
+
+.portrait-wrapper:hover .portrait-img {
+    transform: scale(1.2);
+}
+
+.portrait-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .page-profile .timeline-content {
     position: relative;
     max-width: 1440px;
@@ -13,7 +74,6 @@
     margin: 0 0 40px 0;
     line-height: 1;
 }
-
 
 .page-profile .timeline-container {
     margin: 150px auto;
@@ -256,6 +316,14 @@ body.dark-theme .download-btn {
 body.dark-theme .download-btn:hover {
     background-color: #ffffff;
     color: #000000;
+}
+
+body.dark-theme .portrait-outline {
+    border-color: #ffffff;
+}
+
+body.dark-theme .portrait-label {
+    color: #999999;
 }
 
 @media screen and (max-width: 768px) {
