@@ -226,7 +226,13 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="timeline-section">
-                        <div className="timeline-content">
+                        <div className="timeline-content glossy-wrapper full-width-marquee">
+                            <div className="blobs-container">
+                                <div className="blob blob-1"></div>
+                                <div className="blob blob-2"></div>
+                                <div className="blob blob-3"></div>
+                                <div className="blob blob-4"></div>
+                            </div>
                             <p className="section-subtitle instruments">Інструменти з якими працюю</p>
                             <div className="skills-carousel-section full-width-marquee">
                                 <div className="carousel-viewport">

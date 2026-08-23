@@ -13,7 +13,7 @@ const Header = () => {
             </nav>
 
             <div className="name" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-                <NavLink to="/">Вадим<br/>Войцеховський</NavLink>
+                <a style={{cursor: 'pointer'}}>Вадим<br/>Войцеховський</a>
             </div>
         </header>
     )
