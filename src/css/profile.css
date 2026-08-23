@@ -1,7 +1,7 @@
 .profile-split-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    gap: 50px;
     align-items: start;
 }
 
@@ -53,17 +53,14 @@
 
 .portrait-label {
     font-size: 14px;
-    letter-spacing: 2px;
     color: #666666;
     text-transform: uppercase;
-    font-weight: 500;
 }
 
 .page-profile .timeline-content {
     position: relative;
     max-width: 1440px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    margin: 200px auto;
 }
 
 .page-profile .section-title {
@@ -80,8 +77,8 @@
 }
 
 .profile-text {
-    text-align: left;
-    font-size: 20px;
+    text-align: justify;
+    font-size: 18px;
     color: #000000;
     margin: 0 auto;
     padding: 0;
@@ -130,7 +127,10 @@
     background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-profile .modal.show {
@@ -141,12 +141,9 @@
 .modal-content {
     position: relative;
     background-color: #eaeff8;
-    margin: 250px auto;
     padding: 20px;
-    border: 5px solid #ffffff;
     width: 100%;
-    max-width: 450px;
-    border-radius: 5px;
+    max-width: 500px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-20px);
     transition: transform 0.3s ease;
@@ -154,6 +151,7 @@
 
 .modal-content h3 {
     font-size: 24px;
+    margin: 0 0 30px 0;
 }
 
 .page-profile .modal.show .modal-content {
@@ -162,18 +160,20 @@
 
 .close-button {
     position: absolute;
-    right: 10px;
     top: 0;
-    color: #777777;
+    right: 10px;
     font-size: 36px;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    color: #000000;
 }
 
 .language-options {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 100px;
 }
 
 .language-option {
