@@ -1,3 +1,272 @@
+.list-view-section {
+    width: 100%;
+}
+
+.list-view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.list-view-header .section-title {
+    margin: 0;
+}
+
+.list-view-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.list-item-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.list-item-number {
+    font-size: 32px;
+    color: #b5b5b5;
+    font-weight: 300;
+    font-style: italic;
+    min-width: 40px;
+    margin-top: -5px;
+}
+
+.list-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list-item-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0;
+}
+
+.list-item-subtitle {
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.list-item-desc {
+    font-size: 16px;
+    color: #000000;
+    margin: 15px 0 0 0;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+.list-item-btn {
+    padding: 10px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: transparent;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.list-item-btn:hover {
+    border-color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-theme .list-view-header {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .list-item {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .list-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-theme .list-item-title,
+body.dark-theme .list-item-desc {
+    color: #ffffff;
+}
+
+body.dark-theme .list-item-subtitle {
+    color: #aaaaaa;
+}
+
+body.dark-theme .list-item-number {
+    color: #666666;
+}
+
+body.dark-theme .list-item-btn {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+body.dark-theme .list-item-btn:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.skills-bento-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.bento-box {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.bento-box:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.bento-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bento-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-chip {
+    padding: 8px 16px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    color: #000000;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-chip:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-item .flag-icon {
+    width: 35px;
+    height: auto;
+    margin: 0;
+}
+
+.lang-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.lang-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.lang-level {
+    font-size: 14px;
+    color: #666666;
+}
+
+.other-info-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    color: #000000;
+}
+
+body.dark-theme .bento-box {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .bento-box:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-theme .bento-title {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+body.dark-theme .skill-chip {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.dark-theme .skill-chip:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.dark-theme .lang-name,
+body.dark-theme .other-info-text {
+    color: #ffffff;
+}
+
+body.dark-theme .lang-level {
+    color: #aaaaaa;
+}
+
 .profile-split-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;

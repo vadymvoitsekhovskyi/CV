@@ -111,126 +111,163 @@ const Profile = () => {
                     </div>
                     <div className="timeline-section reveal">
                         <div className="timeline-dot"></div>
-                        <div className="timeline-content">
-                            <h2 className="section-title">Освіта</h2>
-                            <div className="education-grid">
-                                <div className="edu-item">
-                                    <p className="title">Академічний ліцей №5</p>
-                                    <p className="period">2011 - 2020</p>
-                                    <p className="txt">Базова середня освіта</p>
+                        <div className="timeline-content list-view-section">
+                            <div className="list-view-header">
+                                <h2 className="section-title">Освіта</h2>
+                            </div>
+                            <div className="list-view-container">
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">01</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">Академічний ліцей №5</h3>
+                                            <p className="list-item-subtitle">Базова середня освіта &bull; 2011 -
+                                                2020</p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
                                 </div>
-                                <div className="edu-item">
-                                    <p className="title">
-                                        <abbr
-                                            title="Фаховий коледж інформаційних систем і технологій Київського національного економічного університету імені Вадима Гетьмана">
-                                            ФКІСІТ КНЕУ ім. В. Гетьмана
-                                        </abbr>
-                                    </p>
-                                    <p className="period">2020 - 2024</p>
-                                    <p className="txt">Фаховий молодший бакалавр</p>
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">02</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">
+                                                <abbr
+                                                    title="Фаховий коледж інформаційних систем і технологій Київського національного економічного університету імені Вадима Гетьмана">
+                                                    ФКІСІТ КНЕУ ім. В. Гетьмана
+                                                </abbr>
+                                            </h3>
+                                            <p className="list-item-subtitle">Фаховий молодший бакалавр &bull; 2020 -
+                                                2024</p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
                                 </div>
-                                <div className="edu-item">
-                                    <p className="title">
-                                        <abbr title="Державний університет інформаційно-комунікаційних технологій">
-                                            ДУІКТ
-                                        </abbr>
-                                    </p>
-                                    <p className="period">2024 - наш час</p>
-                                    <p className="txt">Бакалавр</p>
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">03</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">
+                                                <abbr
+                                                    title="Державний університет інформаційно-комунікаційних технологій">
+                                                    ДУІКТ
+                                                </abbr>
+                                            </h3>
+                                            <p className="list-item-subtitle">Бакалавр &bull; 2024 - наш час</p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="timeline-section reveal">
                         <div className="timeline-dot"></div>
-                        <div className="timeline-content">
-                            <h2 className="section-title">Досвід роботи</h2>
-                            <div className="experience-grid">
-                                <div className="exp-item">
-                                    <p className="title">ПрАТ «ККПК»</p>
-                                    <p className="period">2024</p>
-                                    <p className="txt">
-                                        Проходив технологічну та переддипломну практику. Ознайомлювався з
-                                        IT-відділом підприємства, написав 2 рішення.
-                                    </p>
+                        <div className="timeline-content list-view-section">
+                            <div className="list-view-header">
+                                <h2 className="section-title">Досвід роботи</h2>
+                            </div>
+                            <div className="list-view-container">
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">01</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">ПрАТ «ККПК»</h3>
+                                            <p className="list-item-subtitle">Технологічна та переддипломна
+                                                практика &bull; 2024</p>
+                                            <p className="list-item-desc">
+                                                Проходив технологічну та переддипломну практику. Ознайомлювався з
+                                                IT-відділом підприємства, написав 2 рішення.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
                                 </div>
-                                <div className="exp-item">
-                                    <p className="title">NIX Solutions</p>
-                                    <p className="period">2026</p>
-                                    <p className="txt">
-                                        Перебував дистанційно на виробничій практиці. Разом з командою
-                                        розробляли невеликий проєкт за методологією Scrum. Був бекенд-розробником
-                                        у команді, займався серверною частиною програми, і трохи зачепив
-                                        фронтенд-верстку деяких сторінок. Попрацював з GitLab, Trello, Java,
-                                        TypeScript.</p>
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">02</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">NIX Solutions</h3>
+                                            <p className="list-item-subtitle">Виробнича практика &bull; 2026</p>
+                                            <p className="list-item-desc">
+                                                Перебував дистанційно на виробничій практиці. Разом з командою
+                                                розробляли невеликий проєкт за методологією Scrum. Був
+                                                бекенд-розробником у команді, займався серверною частиною програми, і
+                                                трохи зачепив фронтенд-верстку деяких сторінок. Попрацював з GitLab,
+                                                Trello, Java, TypeScript.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="timeline-section reveal">
                         <div className="timeline-dot"></div>
-                        <div className="timeline-content">
-                            <h2 className="section-title">Технічні навички</h2>
-                            <div className="skills-container">
-                                <div className="hard-skills">
-                                    <div className="skill">
-                                        <p>
-                                            1) Java (OOP, Core)
-                                            <br/>
-                                            2) C# (.NET)
-                                            <br/>
-                                            3) Python (базово)
-                                            <br/>
-                                            4) JavaScript/TypeScript (базово)
-                                            <br/>
-                                            5) Docker
-                                            <br/>
-                                            6) Postman, Swagger
-                                            <br/>
-                                            7) OOP, REST, MVC
-                                        </p>
-                                        <p>
-                                            8) Android (Java, Kotlin, Flutter)
-                                            <br/>
-                                            9) Spring Boot, Spring MVC, Hibernate/JPA
-                                            <br/>
-                                            10) MVVM, WPF, WinForms, JavaFX, Razor
-                                            <br/>
-                                            11) PostgreSQL, MySQL, Firebase
-                                            <br/>
-                                            12) git, GitLab/GitHub
-                                            <br/>
-                                            13) Figma, Bootstrap
-                                            <br/>
-                                            14) HTML, CSS
-                                        </p>
-                                    </div>
-                                    <div className="languages">
-                                        <span className="language-item">
-                                            <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png" alt=""
-                                                 className="flag-icon"/>
-                                            Українська -<br/>
-                                            рідна
-                                        </span>
-                                        <span className="language-item">
-                                            <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png" alt=""
-                                                 className="flag-icon"/>
-                                            Англійська - обмежений рівень <br/>
-                                            (достатній для роботи)
-                                        </span>
+                        <div className="timeline-content list-view-section">
+                            <div className="list-view-header">
+                                <h2 className="section-title">Навички</h2>
+                            </div>
+                            <div className="skills-bento-grid">
+                                <div className="bento-box tech-skills-box">
+                                    <h3 className="bento-title">Технології</h3>
+                                    <div className="skills-chips">
+                                        <span className="skill-chip">Java (OOP, Core)</span>
+                                        <span className="skill-chip">C# (.NET)</span>
+                                        <span className="skill-chip">Python (базово)</span>
+                                        <span className="skill-chip">JavaScript / TypeScript (базово)</span>
+                                        <span className="skill-chip">Docker</span>
+                                        <span className="skill-chip">Postman, Swagger</span>
+                                        <span className="skill-chip">OOP, REST, MVC</span>
+                                        <span className="skill-chip">Android (Java, Kotlin, Flutter)</span>
+                                        <span className="skill-chip">Spring Boot, MVC, Hibernate/JPA</span>
+                                        <span className="skill-chip">MVVM, WPF, WinForms, JavaFX, Razor</span>
+                                        <span className="skill-chip">PostgreSQL, MySQL, Firebase</span>
+                                        <span className="skill-chip">git, GitLab/GitHub</span>
+                                        <span className="skill-chip">Figma, Bootstrap</span>
+                                        <span className="skill-chip">HTML, CSS</span>
                                     </div>
                                 </div>
-                                <div className="soft-skills">
-                                    <div className="skill other-info">
-                                        <p className="other-title">Інше</p>
-                                        <p>
-                                            Двічі приймав участь у школі DES.
-                                            Писав і захищав з командою
-                                            невеличкі ІТ-проєкти.
-                                        </p>
-                                        <p>
-                                            <b>Хобі</b>: настільний теніс, велоспорт,
-                                            автомобілі. Маю посвідчення водія.
+                                <div className="bento-col">
+                                    <div className="bento-box languages-box">
+                                        <h3 className="bento-title">Мови</h3>
+                                        <div className="languages-list">
+                                            <div className="lang-item">
+                                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png"
+                                                     alt="UA" className="flag-icon"/>
+                                                <div className="lang-text">
+                                                    <span className="lang-name">Українська</span>
+                                                    <span className="lang-level">Рідна</span>
+                                                </div>
+                                            </div>
+                                            <div className="lang-item">
+                                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png"
+                                                     alt="EN" className="flag-icon"/>
+                                                <div className="lang-text">
+                                                    <span className="lang-name">Англійська</span>
+                                                    <span className="lang-level">Обмежений рівень (для роботи)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="bento-box other-box">
+                                        <h3 className="bento-title">Інше</h3>
+                                        <p className="other-info-text">
+                                            Двічі приймав участь у школі DES. Писав і захищав з командою невеличкі
+                                            ІТ-проєкти.
+                                            <br/><br/>
+                                            <b>Хобі:</b> настільний теніс, велоспорт, автомобілі. Маю посвідчення водія.
                                         </p>
                                     </div>
                                 </div>
