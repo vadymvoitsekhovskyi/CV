@@ -131,6 +131,11 @@
 .timeline-section {
     position: relative;
     width: 100%;
+    margin-bottom: 200px;
+}
+
+.timeline-section:last-child {
+    margin-bottom: 0;
 }
 
 .home-projects {
@@ -277,7 +282,6 @@
 
 p.section-subtitle.instruments {
     text-align: center;
-    margin-top: 200px;
 }
 
 .home-footer {
@@ -475,6 +479,7 @@ body.dark-theme .close-text-modal {
         padding: 20px;
         box-sizing: border-box;
         width: 100%;
+        margin: 100px auto;
     }
 
     .hero-socials {

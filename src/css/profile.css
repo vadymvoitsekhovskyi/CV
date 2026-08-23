@@ -191,7 +191,6 @@ body.dark-theme .list-item-btn:hover {
 .skill-chip:hover {
     background: #000000;
     color: #ffffff;
-    transform: translateY(-2px);
 }
 
 .languages-list {
@@ -326,12 +325,6 @@ body.dark-theme .lang-level {
     text-transform: uppercase;
 }
 
-.page-profile .timeline-content {
-    position: relative;
-    max-width: 1440px;
-    margin: 200px auto;
-}
-
 .page-profile .section-title {
     text-align: left;
     font-size: 96px;
@@ -341,8 +334,14 @@ body.dark-theme .lang-level {
     line-height: 1;
 }
 
+.page-profile .timeline-content {
+    position: relative;
+}
+
 .page-profile .timeline-container {
-    margin: 150px auto;
+    position: relative;
+    max-width: 1440px;
+    margin: 200px auto;
 }
 
 .profile-text {
@@ -595,6 +594,73 @@ body.dark-theme .portrait-label {
     color: #999999;
 }
 
-@media screen and (max-width: 768px) {
+body.dark-theme .close-button {
+    color: #ffffff;
+}
 
+@media screen and (max-width: 768px) {
+    .page-profile .section-title {
+        font-size: 42px;
+        margin: 0;
+    }
+
+    .profile-split-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portrait-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .skills-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .list-item-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .list-item-number {
+        margin-top: 0;
+    }
+
+    .list-item-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        box-sizing: border-box;
+        padding: 40px 20px 20px;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .language-options {
+        gap: 50px;
+    }
+
+    .language-option .flag-icon {
+        width: 40px;
+
+    }
 }

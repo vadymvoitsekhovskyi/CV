@@ -25,6 +25,16 @@ const CopyBtn = ({text}: { text: string }) => {
 const Profile = () => {
     const [modalOpen, setModalOpen] = useState(false)
 
+    // const isMaintenance = true;
+    // if (isMaintenance) {
+    //     return (
+    //         <div className="maintenance-container">
+    //             <h1>404</h1>
+    //             <p>Сторінка зараз на ремонті 😉</p>
+    //         </div>
+    //     )
+    // }
+
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setModalOpen(false)
@@ -238,6 +248,18 @@ const Profile = () => {
                                         <span className="skill-chip">Figma, Bootstrap</span>
                                         <span className="skill-chip">HTML, CSS</span>
                                     </div>
+
+                                    {/* Доданий блок Soft Skills */}
+                                    <h3 className="bento-title" style={{marginTop: '30px'}}>Особисті якості</h3>
+                                    <div className="skills-chips">
+                                        <span className="skill-chip">Командна робота</span>
+                                        <span className="skill-chip">Комунікабельність</span>
+                                        <span className="skill-chip">Вирішення проблем (Problem-solving)</span>
+                                        <span className="skill-chip">Адаптивність</span>
+                                        <span className="skill-chip">Тайм-менеджмент</span>
+                                        <span className="skill-chip">Відповідальність</span>
+                                        <span className="skill-chip">Бажання вчитися</span>
+                                    </div>
                                 </div>
                                 <div className="bento-col">
                                     <div className="bento-box languages-box">
@@ -256,7 +278,8 @@ const Profile = () => {
                                                      alt="EN" className="flag-icon"/>
                                                 <div className="lang-text">
                                                     <span className="lang-name">Англійська</span>
-                                                    <span className="lang-level">Обмежений рівень (для роботи)</span>
+                                                    <span
+                                                        className="lang-level">Обмежений рівень (достатній для роботи)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,9 +287,6 @@ const Profile = () => {
                                     <div className="bento-box other-box">
                                         <h3 className="bento-title">Інше</h3>
                                         <p className="other-info-text">
-                                            Двічі приймав участь у школі DES. Писав і захищав з командою невеличкі
-                                            ІТ-проєкти.
-                                            <br/><br/>
                                             <b>Хобі:</b> настільний теніс, велоспорт, автомобілі. Маю посвідчення водія.
                                         </p>
                                     </div>
