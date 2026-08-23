@@ -344,6 +344,7 @@ p.section-subtitle.instruments {
     opacity: 0.5;
     transition: opacity 0.2s ease;
     margin-left: auto;
+    user-select: none;
 }
 
 .home-footer .info-block .copy-btn:hover {

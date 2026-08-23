@@ -10,17 +10,34 @@ const App = () => {
     const {pathname} = useLocation()
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        if (pathname === '/') {
+            window.scrollTo({top: 0, behavior: 'smooth'})
+        } else {
+            setTimeout(() => {
+                const mainElement = document.querySelector('main')
+                if (mainElement) {
+                    const offsetPosition = mainElement.getBoundingClientRect().top + window.scrollY - 50
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    })
+                } else {
+                    window.scrollTo({top: 0, behavior: 'smooth'})
+                }
+            }, 100)
+        }
     }, [pathname])
 
     return (
         <>
             <Header/>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/profile" element={<Profile/>}/>
-                <Route path="/portfolio" element={<Portfolio/>}/>
-            </Routes>
+            <div key={pathname} className="page-transition">
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/portfolio" element={<Portfolio/>}/>
+                </Routes>
+            </div>
             <Footer/>
         </>
     )
