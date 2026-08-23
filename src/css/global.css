@@ -2,12 +2,49 @@
     font-family: "Tektur", sans-serif;
 }
 
+*, *::before, *::after {
+    transition-property: background-color, border-color, color, fill, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
     overflow-x: hidden;
     background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
+    background-color: #eaeff8;
+}
+
+body::before, body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9999;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+body::before {
+    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
+    opacity: 1;
+}
+
+body::after {
+    background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);
+    opacity: 0;
+}
+
+body.dark-theme::before {
+    opacity: 0;
+}
+
+body.dark-theme::after {
+    opacity: 1;
 }
 
 header {
@@ -159,10 +196,6 @@ header {
 .scroll-to-top .material-icons {
     font-weight: bold;
     transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-body.dark-theme {
-    background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);
 }
 
 body.dark-theme .sun-icon {

@@ -240,8 +240,6 @@
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -742,5 +740,25 @@ body.dark-theme .close-text-modal {
     .home-footer .vault {
         flex-direction: column;
         align-items: start;
+    }
+
+    .blob-1 {
+        top: 50px;
+        animation: move-blob-1 14s infinite alternate ease-in-out;
+    }
+
+    .blob-2 {
+        bottom: 150px;
+        animation: move-blob-2 20s infinite alternate ease-in-out;
+    }
+
+    .blob-3 {
+        top: 20px;
+        animation: move-blob-3 24s infinite alternate ease-in-out;
+    }
+
+    .blob-4 {
+        bottom: 50px;
+        animation: move-blob-4 28s infinite alternate ease-in-out;
     }
 }
