@@ -296,19 +296,14 @@ p.section-subtitle.instruments {
 }
 
 .home-footer {
-    width: 100vw;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: 100px;
     background-image: linear-gradient(135deg, #2b2d33, #1f2124, #18191a);
     color: #ffffff;
-    padding: 60px 50px 60px;
+    padding: 20px 20px 60px;
     box-sizing: border-box;
 }
 
@@ -317,39 +312,70 @@ p.section-subtitle.instruments {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-infographic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+}
+
+.footer-extra-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.info-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.info-badge .material-icons {
+    font-size: 52px;
+    color: #666666;
+    user-select: none;
+}
+
+.info-badge .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-badge .info-title {
+    font-size: 24px;
+}
+
+.info-badge .info-subtitle {
+    font-size: 14px;
+    color: #999999;
 }
 
 .home-footer .contact-info-blocks {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
+    flex: 1;
 }
 
 .home-footer .info-block {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
     font-size: 18px;
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    border: none;
     box-sizing: border-box;
-}
-
-.home-footer .info-block svg {
-    width: 25px;
-    height: 25px;
-    fill: currentColor;
-}
-
-.home-footer .icons-combined {
-    display: flex;
-    align-items: center;
 }
 
 .home-footer .info-block .copy-btn {
@@ -368,30 +394,26 @@ p.section-subtitle.instruments {
 
 .home-footer .social-links-blocks {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: end;
+    gap: 40px;
     width: 100%;
-    max-width: 300px;
+    flex: 1;
 }
 
-.home-footer .social-btn {
-    background-color: #333333;
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
+.social-btn-circular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     color: #ffffff;
-    border: 1px solid #666666;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.2s ease;
-    display: block;
+    text-decoration: none;
 }
 
-.home-footer .social-btn:hover {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: #000000;
+.social-btn-circular svg {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
 }
 
 .home-footer .vault {
@@ -412,6 +434,10 @@ p.section-subtitle.instruments {
     color: #666666;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+body.dark-theme .info-badge .info-title {
+    color: #ffffff;
 }
 
 body.dark-theme .section-subtitle {
@@ -480,9 +506,7 @@ body.dark-theme .glossy-wrapper.full-width-marquee {
     .project-card:hover .project-card-inner {
         transform: rotateY(180deg);
     }
-}
 
-@media (hover: hover) and (pointer: fine) {
     .info-btn,
     .close-flip-btn {
         display: none;
@@ -591,11 +615,12 @@ body.dark-theme .glossy-wrapper.full-width-marquee {
     }
 
     .home-footer {
-        padding: 50px 20px;
+        padding: 20px;
     }
 
     .footer-content {
         flex-direction: column;
+        align-items: start;
         gap: 50px;
         width: 100%;
     }
@@ -606,9 +631,20 @@ body.dark-theme .glossy-wrapper.full-width-marquee {
         max-width: 100%;
     }
 
+    .home-footer .social-links-blocks {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .social-btn-circular {
+        color: #666666;
+    }
+
     .home-footer .info-block {
-        font-size: 12px;
-        word-break: break-all;
+        font-size: 15px;
+        word-break: normal;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .home-footer .vault {
