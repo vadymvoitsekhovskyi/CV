@@ -227,20 +227,6 @@ const Home = () => {
                     </div>
                     <div className="timeline-section">
                         <div className="timeline-content glossy-wrapper full-width-marquee">
-                            <svg style={{position: 'absolute', width: 0, height: 0, pointerEvents: 'none'}}>
-                                <filter id="water-blend">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur_merge"/>
-                                    <feColorMatrix in="blur_merge" mode="matrix"
-                                                   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -10" result="goo"/>
-                                    <feGaussianBlur in="goo" stdDeviation="80"/>
-                                </filter>
-                            </svg>
-                            <div className="blobs-container">
-                                <div className="blob blob-1"></div>
-                                <div className="blob blob-2"></div>
-                                <div className="blob blob-3"></div>
-                                <div className="blob blob-4"></div>
-                            </div>
                             <p className="section-subtitle instruments">Інструменти з якими працюю</p>
                             <div className="skills-carousel-section full-width-marquee">
                                 <div className="carousel-viewport">
