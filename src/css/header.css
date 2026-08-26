@@ -32,7 +32,7 @@ header {
     cursor: default;
     white-space: nowrap;
     transform: skew(-20deg);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.5s ease;
 }
 
 .internship-badge:hover {

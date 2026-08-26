@@ -160,7 +160,7 @@ const Home = () => {
                                                 className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`}
                                                 onClick={() => setModalSrc(p.img)}>
                                                 <div className="project-card-front">
-                                                    <img src={p.img} alt=""/>
+                                                    <img src={p.img} alt="..."/>
                                                     <div className="info-btn" onClick={(e) => {
                                                         e.stopPropagation();
                                                         if (window.innerWidth <= 768) {
@@ -218,7 +218,7 @@ const Home = () => {
                 <PageFooter/>
             </main>
             <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
-                {modalSrc && <img src={modalSrc} alt=""/>}
+                {modalSrc && <img src={modalSrc} alt="..."/>}
             </div>
             <div className={`modal${infoModal ? ' active' : ''}`} onClick={() => setInfoModal(null)}>
                 {infoModal && (

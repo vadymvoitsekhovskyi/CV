@@ -75,7 +75,7 @@
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
-    transition: color 0.2s ease;
+    transition: color 0.5s ease;
     width: fit-content;
 }
 
@@ -103,7 +103,7 @@
     font-size: 18px;
     cursor: pointer;
     opacity: 0.5;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.5s ease;
     margin-left: auto;
     user-select: none;
 }
@@ -125,7 +125,7 @@
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
-    transition: color 0.2s ease;
+    transition: color 0.5s ease;
 }
 
 .social-links-text a:hover {

@@ -217,7 +217,7 @@ const Profile = () => {
                                         <div className="languages-list">
                                             <div className="lang-item">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png"
-                                                     alt="UA" className="flag-icon"/>
+                                                     alt="..." className="flag-icon"/>
                                                 <div className="lang-text">
                                                     <span className="lang-name">Українська</span>
                                                     <span className="lang-level">Рідна</span>
@@ -225,7 +225,7 @@ const Profile = () => {
                                             </div>
                                             <div className="lang-item">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png"
-                                                     alt="EN" className="flag-icon"/>
+                                                     alt="..." className="flag-icon"/>
                                                 <div className="lang-text">
                                                     <span className="lang-name">Англійська</span>
                                                     <span
@@ -254,12 +254,12 @@ const Profile = () => {
                         <h3>Виберіть мову резюме 👇</h3>
                         <div className="language-options">
                             <a href="/docs/Резюме.pdf" download="Резюме.pdf" className="language-option">
-                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png" alt=""
+                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png" alt="..."
                                      className="flag-icon"/>
                                 <span>Українська</span>
                             </a>
                             <a href="/docs/Resume.pdf" download="Resume.pdf" className="language-option">
-                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png" alt=""
+                                <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png" alt="..."
                                      className="flag-icon"/>
                                 <span>Англійська</span>
                             </a>

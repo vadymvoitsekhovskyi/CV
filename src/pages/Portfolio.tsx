@@ -51,7 +51,7 @@ const Portfolio = () => {
                                     item.type === 'img' ? (
                                         <div key={i} className={`gallery-item img-item ${item.className}`}
                                              onClick={() => setModalSrc(item.src!)}>
-                                            <img src={item.src} alt="сертифікат"/>
+                                            <img src={item.src} alt="..."/>
                                         </div>
                                     ) : (
                                         <div key={i} className={`gallery-item empty-block ${item.className}`}></div>
@@ -63,7 +63,7 @@ const Portfolio = () => {
                 </div>
                 <PageFooter/>
                 <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
-                    {modalSrc && <img src={modalSrc} alt=""/>}
+                    {modalSrc && <img src={modalSrc} alt="..."/>}
                 </div>
             </main>
         </div>
