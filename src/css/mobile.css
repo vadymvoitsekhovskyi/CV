@@ -142,8 +142,8 @@
     }
 
     .social-links-text {
-        flex-direction: row;
-        justify-content: end;
+        flex-direction: column;
+        align-items: end;
     }
 
     .social-links-text a {

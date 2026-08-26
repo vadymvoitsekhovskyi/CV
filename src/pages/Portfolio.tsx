@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import PageFooter from '../components/PageFooter'
 import {useReveal} from '../hooks/useReveal'
+import HeroSection from '../components/HeroSection'
 
 const GALLERY_ITEMS = [
     {type: 'img', src: '/images/c0.jpg', className: ''},
@@ -36,12 +37,7 @@ const Portfolio = () => {
 
     return (
         <div className="page-portfolio">
-            <div className="hero-section">
-                <picture className="full-width-resume">
-                    <source media="(max-width: 768px)" srcSet="/images/profile_mobile.png"/>
-                    <img src="/images/profile.png" alt="..."/>
-                </picture>
-            </div>
+            <HeroSection />
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-line"></div>

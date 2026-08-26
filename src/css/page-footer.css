@@ -132,6 +132,19 @@
     color: #003cff;
 }
 
+.footer-section-title {
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+.social-links-text .footer-section-title {
+    text-align: right;
+}
+
 .home-footer .vault {
     width: 100%;
     display: flex;

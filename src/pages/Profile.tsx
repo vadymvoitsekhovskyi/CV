@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import PageFooter from '../components/PageFooter'
 import {useReveal} from '../hooks/useReveal'
+import HeroSection from '../components/HeroSection'
 
 const Profile = () => {
     const [modalOpen, setModalOpen] = useState(false)
@@ -22,12 +23,7 @@ const Profile = () => {
 
     return (
         <div className="page-profile">
-            <div className="hero-section">
-                <picture className="full-width-resume">
-                    <source media="(max-width: 768px)" srcSet="/images/profile_mobile.png"/>
-                    <img src="/images/profile.png" alt="..."/>
-                </picture>
-            </div>
+            <HeroSection />
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-line"></div>

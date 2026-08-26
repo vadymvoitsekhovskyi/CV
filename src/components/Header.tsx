@@ -5,11 +5,11 @@ const Header = () => {
         <header>
             <nav className="nav-buttons">
                 <div className="internship-badge">
-                    <span>Шукаю стажування</span>
+                    <span>Trainee Backend Developer</span>
                 </div>
                 <NavLink to="/">Головна</NavLink>
                 <NavLink to="/profile">Профіль</NavLink>
-                <NavLink to="/portfolio">Додатково</NavLink>
+                <NavLink to="/portfolio">Навчання</NavLink>
             </nav>
 
             <div className="name" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>

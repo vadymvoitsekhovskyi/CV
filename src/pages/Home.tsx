@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from 'react'
 import PageFooter from '../components/PageFooter'
 import {useReveal} from '../hooks/useReveal'
+import HeroSection from '../components/HeroSection'
 
 const SLIDES = ['Java', 'C#', 'JavaScript', 'React', 'Android', 'Kotlin', 'PostgreSQL', 'Docker', '.NET', 'git/GitHub']
 
@@ -129,11 +130,7 @@ const Home = () => {
 
     return (
         <div className="page-home">
-            <div className="hero-section">
-                <picture className="full-width-resume">
-                    <source media="(max-width: 768px)" srcSet="/images/profile_mobile.png"/>
-                    <img src="/images/profile.png" alt="..."/>
-                </picture>
+            <HeroSection>
                 <div className="hero-socials">
                     <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
                        rel="noreferrer" className="hero-btn linkedin">
@@ -144,7 +141,7 @@ const Home = () => {
                         GitHub
                     </a>
                 </div>
-            </div>
+            </HeroSection>
             <main className="timeline-main">
                 <div className="timeline-container">
                     <div className="timeline-section reveal">
@@ -159,8 +156,9 @@ const Home = () => {
                                 <div className="project-gallery">
                                     {PROJECTS.map((p, i) => (
                                         <div key={i} className="project-card">
-                                            <div className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`}
-                                                 onClick={() => setModalSrc(p.img)}>
+                                            <div
+                                                className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`}
+                                                onClick={() => setModalSrc(p.img)}>
                                                 <div className="project-card-front">
                                                     <img src={p.img} alt=""/>
                                                     <div className="info-btn" onClick={(e) => {

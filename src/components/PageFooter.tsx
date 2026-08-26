@@ -29,7 +29,7 @@ const PageFooter = () => {
             <div className="footer-content">
                 <div className="footer-infographic">
                     <div className="info-badge">
-                        <span className="material-icons">developer_mode</span>
+                        <span className="material-icons">devices</span>
                         <div className="info-text">
                             <span className="info-title">РОЗРОБКА</span>
                             <span className="info-subtitle">ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</span>
@@ -37,19 +37,21 @@ const PageFooter = () => {
                     </div>
                     <div className="footer-extra-info">
                         <div className="status-indicator">
-                            <span>Шукаю стажування (Open to work)</span>
+                            <span>Відкритий до стажування та комунікації</span>
                         </div>
                         <div className="location-indicator">
-                            <span>Обухів, Україна (Remote / Hybrid)</span>
+                            <span>Обухів, Київ, УКРАЇНА (офіс/віддалено/гібрид)</span>
                         </div>
                     </div>
                 </div>
                 <div className="footer-nav-links">
+                    <span className="footer-section-title">Навігація</span>
                     <Link to="/" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Головна</Link>
                     <Link to="/profile" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Профіль</Link>
-                    <Link to="/portfolio" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Додатково</Link>
+                    <Link to="/portfolio" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Навчання</Link>
                 </div>
                 <div className="contact-info-blocks">
+                    <span className="footer-section-title">Контактні дані</span>
                     <div className="info-block">
                         <span>@vadymvoitsekhovskyi</span>
                         <CopyBtn text="@vadymvoitsekhovskyi"/>
@@ -64,6 +66,7 @@ const PageFooter = () => {
                     </div>
                 </div>
                 <div className="social-links-text">
+                    <span className="footer-section-title">Соціальні мережі</span>
                     <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
                        rel="noreferrer">LinkedIn</a>
