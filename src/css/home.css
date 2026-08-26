@@ -650,10 +650,6 @@ body.dark-theme .glossy-wrapper.full-width-marquee {
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .home-footer .info-block .copy-btn {
-        margin-left: 10px;
-    }
-
     .social-links-text {
         flex-direction: row;
         justify-content: end;

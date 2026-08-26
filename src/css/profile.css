@@ -609,11 +609,6 @@ body.dark-theme .close-button {
         gap: 30px;
     }
 
-    .portrait-container {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
     .skills-bento-grid {
         grid-template-columns: 1fr;
         gap: 20px;
