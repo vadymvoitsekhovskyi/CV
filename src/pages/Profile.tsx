@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
 import PageFooter from '../components/PageFooter'
 import {useReveal} from '../hooks/useReveal'
 
@@ -205,8 +204,6 @@ const Profile = () => {
                                         <span className="skill-chip">Figma, Bootstrap</span>
                                         <span className="skill-chip">HTML, CSS</span>
                                     </div>
-
-                                    {/* Доданий блок Soft Skills */}
                                     <h3 className="bento-title" style={{marginTop: '30px'}}>Особисті якості</h3>
                                     <div className="skills-chips">
                                         <span className="skill-chip">Командна робота</span>

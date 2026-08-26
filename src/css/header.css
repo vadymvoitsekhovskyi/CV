@@ -1,0 +1,75 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0;
+}
+
+.internship-badge {
+    background-color: transparent;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px #000000 solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 20px 10px;
+    cursor: default;
+    white-space: nowrap;
+    transform: skew(-20deg);
+    transition: background-color 0.2s ease;
+}
+
+.internship-badge:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.internship-badge span {
+    display: inline-block;
+    transform: skew(20deg);
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    color: #000000;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color 0.5s ease;
+}
+
+.nav-buttons a:hover {
+    color: #003cff;
+}
+
+.name {
+    padding: 0;
+    border-right: none;
+    text-align: right;
+}
+
+.name a {
+    font-size: 96px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+}

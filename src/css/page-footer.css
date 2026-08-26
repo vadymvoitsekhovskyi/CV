@@ -1,0 +1,153 @@
+.home-footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(135deg, #2b2d33, #1f2124, #18191a);
+    color: #ffffff;
+    padding: 40px 40px 60px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-infographic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1.5;
+}
+
+.info-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.info-badge .material-icons {
+    font-size: 52px;
+    color: #666666;
+    user-select: none;
+}
+
+.info-badge .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-badge .info-title {
+    font-size: 24px;
+}
+
+.info-badge .info-subtitle {
+    font-size: 14px;
+    color: #999999;
+}
+
+.footer-extra-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.footer-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    width: fit-content;
+}
+
+.footer-nav-links a:hover {
+    color: #003cff;
+}
+
+.home-footer .contact-info-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1.5;
+}
+
+.home-footer .info-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.home-footer .info-block .copy-btn {
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    margin-left: auto;
+    user-select: none;
+}
+
+.home-footer .info-block .copy-btn:hover {
+    opacity: 1;
+}
+
+.social-links-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    flex: 1;
+}
+
+.social-links-text a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.social-links-text a:hover {
+    color: #003cff;
+}
+
+.home-footer .vault {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.footer-copyright {
+    color: #666666;
+    font-size: 14px;
+}
+
+.label-name {
+    color: #666666;
+    font-size: 14px;
+    text-transform: uppercase;
+}

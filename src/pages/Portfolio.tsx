@@ -1,24 +1,19 @@
 import {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
 import PageFooter from '../components/PageFooter'
 import {useReveal} from '../hooks/useReveal'
 
 const GALLERY_ITEMS = [
     {type: 'img', src: '/images/c0.jpg', className: ''},
     {type: 'empty', className: 'col-span-2'},
-
     {type: 'empty', className: ''},
     {type: 'empty', className: ''},
     {type: 'img', src: '/images/c2.jpg', className: 'row-span-2'},
-
     {type: 'img', src: '/images/c5.jpg', className: 'col-span-2'},
     {type: 'empty', src: '/images/c3.jpg', className: ''},
     {type: 'img', src: '/images/c3.jpg', className: 'col-span-2'},
-
     {type: 'img', src: '/images/c4.jpg', className: 'row-span-2'},
     {type: 'empty', className: ''},
     {type: 'empty', className: ''},
-
     {type: 'img', src: '/images/c1.jpg', className: 'col-span-2'},
     {type: 'img', src: '/images/c6.jpg', className: ''},
     {type: 'empty', className: ''},
@@ -67,7 +62,6 @@ const Portfolio = () => {
                                     )
                                 ))}
                             </div>
-
                         </div>
                     </div>
                 </div>
