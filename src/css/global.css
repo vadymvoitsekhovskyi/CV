@@ -13,7 +13,7 @@ body {
     padding: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
+    background-image: linear-gradient(135deg, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
 }
 
 body::before, body::after {
@@ -29,12 +29,12 @@ body::before, body::after {
 }
 
 body::before {
-    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
+    background-image: linear-gradient(135deg, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
     opacity: 1;
 }
 
 body::after {
-    background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);
+    background-image: linear-gradient(175deg, #4c4f59, #393c40, #303133);
     opacity: 0;
 }
 
@@ -104,7 +104,7 @@ header {
     color: #000000;
     text-transform: uppercase;
     display: inline-block;
-    transition: color 0.2s ease;
+    transition: color 0.5s ease;
 }
 
 .nav-buttons a:hover {
@@ -245,44 +245,3 @@ body.dark-theme .moon-icon {
         color: #000000;
     }
 }
-
-/*.maintenance-container {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    z-index: 10000;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*    background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);*/
-/*    padding: 20px;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*body.dark-theme .maintenance-container {*/
-/*    background-image: linear-gradient(135deg, #4c4f59, #393c40, #303133);*/
-/*}*/
-
-/*.maintenance-container h1 {*/
-/*    font-size: 150px;*/
-/*    color: #ff0000;*/
-/*    margin: 0;*/
-/*    font-weight: 900;*/
-/*    line-height: 1;*/
-/*    text-shadow: 4px 4px 15px rgba(255, 0, 0, 0.3);*/
-/*}*/
-
-/*.maintenance-container p {*/
-/*    font-size: 28px;*/
-/*    color: #000000;*/
-/*    font-weight: bold;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*body.dark-theme .maintenance-container p {*/
-/*    color: #ffffff;*/
-/*}*/
