@@ -14,7 +14,6 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     background-image: linear-gradient(to bottom, #eaeff8, #e1e8fa, #e1e8fa, #d4dffa);
-    background-color: #eaeff8;
 }
 
 body::before, body::after {

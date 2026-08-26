@@ -1,40 +1,10 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-
-const CopyBtn = ({text}: { text: string }) => {
-    const [copied, setCopied] = useState(false)
-
-    const handle = (e: React.MouseEvent) => {
-        e.stopPropagation()
-        navigator.clipboard.writeText(text).then(() => {
-            setCopied(true)
-            setTimeout(() => setCopied(false), 2000)
-        })
-    }
-
-    return (
-        <span
-            onClick={handle}
-            title="Копіювати"
-            className="material-icons copy-btn"
-        >
-            {copied ? 'check' : 'content_copy'}
-        </span>
-    )
-}
+import PageFooter from '../components/PageFooter'
+import {useReveal} from '../hooks/useReveal'
 
 const Profile = () => {
     const [modalOpen, setModalOpen] = useState(false)
-
-    // const isMaintenance = true;
-    // if (isMaintenance) {
-    //     return (
-    //         <div className="maintenance-container">
-    //             <h1>404</h1>
-    //             <p>Сторінка зараз на ремонті 😉</p>
-    //         </div>
-    //     )
-    // }
 
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
@@ -45,21 +15,7 @@ const Profile = () => {
         return () => window.removeEventListener('keydown', handleKey)
     }, [])
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {threshold: 0.1});
-
-        const hiddenElements = document.querySelectorAll('.reveal');
-        hiddenElements.forEach((el) => observer.observe(el));
-
-        return () => observer.disconnect();
-    }, []);
+    useReveal()
 
     const closeOnBackdrop = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === e.currentTarget) setModalOpen(false)
@@ -296,63 +252,7 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <footer className="home-footer reveal">
-                    <div className="footer-content">
-                        <div className="footer-infographic">
-                            <div className="info-badge">
-                                <span className="material-icons">developer_mode</span>
-                                <div className="info-text">
-                                    <span className="info-title">РОЗРОБКА</span>
-                                    <span className="info-subtitle">ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</span>
-                                </div>
-                            </div>
-                            <div className="footer-extra-info">
-                                <div className="status-indicator">
-                                    <span>Шукаю стажування (Open to work)</span>
-                                </div>
-                                <div className="location-indicator">
-                                    <span>Обухів, Україна (Remote / Hybrid)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="footer-nav-links">
-                            <Link to="/" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Головна</Link>
-                            <Link to="/profile"
-                                  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Профіль</Link>
-                            <Link to="/portfolio"
-                                  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Додатково</Link>
-                        </div>
-                        <div className="contact-info-blocks">
-                            <div className="info-block">
-                                <span>@vadymvoitsekhovskyi</span>
-                                <CopyBtn text="@vadymvoitsekhovskyi"/>
-                            </div>
-                            <div className="info-block">
-                                <span>067 518 22 22</span>
-                                <CopyBtn text="067 518 22 22"/>
-                            </div>
-                            <div className="info-block">
-                                <span>vadim.rolex.2005@gmail.com</span>
-                                <CopyBtn text="vadim.rolex.2005@gmail.com"/>
-                            </div>
-                        </div>
-                        <div className="social-links-text">
-                            <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer">GitHub</a>
-                            <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
-                               rel="noreferrer">LinkedIn</a>
-                            <a href="https://discord.com/users/983375318268141629" target="_blank"
-                               rel="noreferrer">Discord</a>
-                        </div>
-                    </div>
-                    <div className="vault">
-                        <div className="footer-copyright">
-                            © {new Date().getFullYear()} Вадим Войцеховський
-                        </div>
-                        <div className="label-name">
-                            VOITSEKH
-                        </div>
-                    </div>
-                </footer>
+                <PageFooter/>
                 <div className={`modal${modalOpen ? ' show' : ''}`} onClick={closeOnBackdrop}>
                     <div className="modal-content">
                         <span className="close-button" onClick={() => setModalOpen(false)}>
