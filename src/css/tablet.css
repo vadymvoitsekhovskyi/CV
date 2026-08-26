@@ -1,0 +1,96 @@
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+    header {
+        padding: 30px;
+    }
+
+    .name a {
+        font-size: 64px;
+    }
+
+    .nav-buttons a {
+        font-size: 16px;
+    }
+
+    .internship-badge {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .page-home .section-title,
+    .page-portfolio .section-title,
+    .page-profile .section-title {
+        font-size: 64px;
+    }
+
+    .page-home .section-subtitle,
+    .page-portfolio .section-subtitle {
+        font-size: 20px;
+    }
+
+    .timeline-container {
+        margin: 120px auto;
+        padding: 0 30px;
+    }
+
+    .project-gallery {
+        gap: 15px;
+    }
+
+    .project-card-back h3 {
+        font-size: 20px;
+    }
+
+    .project-card-back p,
+    .project-card-back a {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .profile-split-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .portrait-container {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .skills-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .list-item-left {
+        gap: 20px;
+    }
+
+    .list-item-desc {
+        font-size: 14px;
+    }
+
+    .certificate-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+
+    .footer-infographic,
+    .footer-nav-links,
+    .home-footer .contact-info-blocks,
+    .social-links-text {
+        flex: 1 1 40%;
+        max-width: 50%;
+    }
+
+    .social-links-text {
+        align-items: flex-start;
+    }
+
+    .social-links-text .footer-section-title {
+        text-align: left;
+    }
+}

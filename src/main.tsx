@@ -10,6 +10,7 @@ import './css/home.css'
 import './css/portfolio.css'
 import './css/profile.css'
 import './css/theme.css'
+import './css/tablet.css'
 import './css/mobile.css'
 
 createRoot(document.getElementById('root')!).render(
