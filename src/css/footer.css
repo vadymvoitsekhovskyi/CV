@@ -32,6 +32,30 @@
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.lang-icon {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffffff;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+.theme-toggle:hover .lang-icon {
+    color: #333333;
+    background-color: #ffffff;
+}
+
 .theme-toggle {
     position: relative;
     width: 50px;

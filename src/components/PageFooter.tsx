@@ -17,6 +17,7 @@ const CopyBtn = ({text}: { text: string }) => {
             onClick={handle}
             title="Копіювати"
             className="material-icons copy-btn"
+            translate="no"
         >
             {copied ? 'check' : 'content_copy'}
         </span>
@@ -29,7 +30,7 @@ const PageFooter = () => {
             <div className="footer-content">
                 <div className="footer-infographic">
                     <div className="info-badge">
-                        <span className="material-icons">devices</span>
+                        <span className="material-icons" translate="no">devices</span>
                         <div className="info-text">
                             <span className="info-title">РОЗРОБКА</span>
                             <span className="info-subtitle">ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</span>
