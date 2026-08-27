@@ -2,8 +2,8 @@
     display: none !important;
 }
 
-body {
-    top: 0 !important;
+.home-footer.reveal {
+    transform: translateY(0) !important;
 }
 
 #goog-gt-tt {
@@ -13,6 +13,8 @@ body {
 .goog-te-spinner-pos {
     display: none !important;
 }
+
+/********************************************************************************************************************/
 
 * {
     font-family: "Tektur", sans-serif;
@@ -25,6 +27,7 @@ body {
 }
 
 body {
+    top: 0 !important;
     margin: 0;
     padding: 0;
     overflow-y: scroll;
