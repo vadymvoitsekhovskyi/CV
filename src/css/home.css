@@ -110,6 +110,8 @@
 .project-card-back {
     transform: rotateY(180deg);
     flex-direction: column;
+    border: 5px solid #4c4f59;
+    padding: 20px;
 }
 
 .project-card-back h3 {
@@ -199,6 +201,7 @@ p.section-subtitle.instruments {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -232,7 +235,8 @@ p.section-subtitle.instruments {
         transform: rotateY(180deg);
     }
 
-    .info-btn, .close-flip-btn {
+    .info-btn,
+    .close-flip-btn {
         display: none;
     }
 }

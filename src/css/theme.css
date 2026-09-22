@@ -154,7 +154,8 @@ body.dark-theme .skill-chip:hover {
     color: #000000;
 }
 
-body.dark-theme .lang-name, body.dark-theme .other-info-text {
+body.dark-theme .lang-name,
+body.dark-theme .other-info-text {
     color: #ffffff;
 }
 
@@ -185,7 +186,8 @@ body.dark-theme .other-info p {
     color: #ffffff;
 }
 
-body.dark-theme .edu-item .period, body.dark-theme .exp-item .period {
+body.dark-theme .edu-item .period,
+body.dark-theme .exp-item .period {
     color: grey;
 }
 
@@ -222,7 +224,12 @@ body.dark-theme .close-button {
     color: #ffffff;
 }
 
+body.dark-theme .project-card-back {
+    border: 5px solid #eaeff8;
+}
+
 @media screen and (max-width: 768px) {
+
     body.dark-theme .name a,
     body.dark-theme .nav-buttons a,
     body.dark-theme .internship-badge {

@@ -1,9 +1,9 @@
-import {useEffect, useRef, useState} from 'react'
+import { useEffect, useRef, useState } from 'react'
 import PageFooter from '../components/PageFooter'
-import {useReveal} from '../hooks/useReveal'
+import { useReveal } from '../hooks/useReveal'
 import HeroSection from '../components/HeroSection'
 
-const SLIDES = ['Java', 'C#', 'JavaScript', 'React', 'Android', 'Kotlin', 'PostgreSQL', 'Docker', '.NET', 'git/GitHub']
+const SLIDES = ['Java', 'Spring', 'ASP.NET', '.NET WPF', 'JavaScript', 'TypeScript', 'ExpressJS', 'Flutter', 'Android', 'PostgreSQL']
 
 interface Project {
     img: string
@@ -17,9 +17,9 @@ const PROJECTS: Project[] = [
         img: '/images/restaurant.png',
         title: 'Restaurant',
         description:
-            'Простий сайт-візитка онлайн ресторану, написаний на HTML/CSS/JavaScript. З нього я почав знайомство з ' +
-            'вебом. Сайт не функціональний, без бази даних. ' +
-            'Просто робив його, щоб навчитися розташовувати кнопки, блоки, меню, попрацювати зі стилями, фреймворком ' +
+            'Це є простий сайт-візитка онлайн ресторану, написаний на HTML/CSS/JavaScript.' +
+            'Він не функціональний і без бази даних. ' +
+            'Просто робився, щоб навчитися розташовувати кнопки, блоки, меню, попрацювати зі стилями, фреймворком ' +
             'Bootstrap. На сайті кілька сторінок, зокрема головна з категоріями страв, конкретні страви та їх деталі, ' +
             'кошик та оформлення замовлення.',
     },
@@ -43,7 +43,7 @@ const PROJECTS: Project[] = [
         img: '/images/smarttodo.png',
         title: 'SmartToDo',
         description:
-            'Вебсистема управління завданнями, реалізована на ExpressJS, що надасть ' +
+            'Вебсистема управління завданнями, реалізована на ExpressJS, що надає ' +
             'користувачу можливість фіксувати свої робочі записи та повсякденні справи. ' +
             'Можна написати алгоритм виконання спортивних вправ або поставити ' +
             'задачі під якийсь проєкт. Дозволяє створювати завдання, ' +
@@ -58,9 +58,8 @@ const PROJECTS: Project[] = [
                 Простий інформаційно-навчальний бот на Java + TelegramAPI. Спрямований
                 на тих, хто цікавиться автомобілями, вчиться в автошколі та простих автолюбителів.
                 Надає короткі довідки про принцип роботи, основи керування, будову авто, техніку управління,
-                категорії ТЗ, марки, історію. Поки доступно невелику кількість функціоналу, програма в процесі
-                розробки.
-                Ознайомитися з ботом можна за посиланням {' '}
+                категорії ТЗ, марки, історію. Поки доступно невелика кількість функціоналу, програма в процесі
+                розробки. Ознайомитися з ботом можна за посиланням {' '}
                 <a href="https://chatbot-ftcs.onrender.com" target="_blank" rel="noreferrer">
                     chatbot-ftcs.onrender.com
                 </a>.
@@ -111,7 +110,7 @@ const Home = () => {
     const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>({})
 
     const toggleFlip = (idx: number) => {
-        setFlippedCards(prev => ({...prev, [idx]: !prev[idx]}))
+        setFlippedCards(prev => ({ ...prev, [idx]: !prev[idx] }))
     }
 
     useEffect(() => {
@@ -133,11 +132,11 @@ const Home = () => {
             <HeroSection>
                 <div className="hero-socials">
                     <a href="https://www.linkedin.com/in/vadym-voitsekhovskyi-623868300/" target="_blank"
-                       rel="noreferrer" className="hero-btn linkedin">
+                        rel="noreferrer" className="hero-btn linkedin">
                         LinkedIn
                     </a>
                     <a href="https://github.com/vadymvoitsekhovskyi" target="_blank" rel="noreferrer"
-                       className="hero-btn github">
+                        className="hero-btn github">
                         GitHub
                     </a>
                 </div>
@@ -160,7 +159,7 @@ const Home = () => {
                                                 className={`project-card-inner${flippedCards[i] ? ' flipped' : ''}`}
                                                 onClick={() => setModalSrc(p.img)}>
                                                 <div className="project-card-front">
-                                                    <img src={p.img} alt="..."/>
+                                                    <img src={p.img} alt="..." />
                                                     <div className="info-btn" onClick={(e) => {
                                                         e.stopPropagation();
                                                         if (window.innerWidth <= 768) {
@@ -215,10 +214,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <PageFooter/>
+                <PageFooter />
             </main>
             <div className={`modal${modalSrc ? ' active' : ''}`} onClick={() => setModalSrc(null)}>
-                {modalSrc && <img src={modalSrc} alt="..."/>}
+                {modalSrc && <img src={modalSrc} alt="..." />}
             </div>
             <div className={`modal${infoModal ? ' active' : ''}`} onClick={() => setInfoModal(null)}>
                 {infoModal && (

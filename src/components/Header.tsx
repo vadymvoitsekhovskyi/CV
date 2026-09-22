@@ -1,19 +1,19 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
         <header>
             <nav className="nav-buttons">
                 <div className="internship-badge">
-                    <span>Trainee Backend Developer</span>
+                    <span>Back-end Developer</span>
                 </div>
                 <NavLink to="/">Головна</NavLink>
                 <NavLink to="/profile">Профіль</NavLink>
                 <NavLink to="/portfolio">Навчання</NavLink>
             </nav>
 
-            <div className="name" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-                <a style={{cursor: 'pointer'}}>Вадим<br/>Войцеховський</a>
+            <div className="name" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <a style={{ cursor: 'pointer' }}>Вадим<br />Войцеховський</a>
             </div>
         </header>
     )

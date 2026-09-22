@@ -1,6 +1,6 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import {HashRouter} from 'react-router-dom'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './css/global.css'
 import './css/header.css'
@@ -15,8 +15,8 @@ import './css/mobile.css'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <HashRouter>
-            <App/>
-        </HashRouter>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </StrictMode>
 )

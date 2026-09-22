@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import PageFooter from '../components/PageFooter'
-import {useReveal} from '../hooks/useReveal'
+import { useReveal } from '../hooks/useReveal'
 import HeroSection from '../components/HeroSection'
 
 const Profile = () => {
@@ -34,7 +34,7 @@ const Profile = () => {
                                 <div className="portrait-container">
                                     <div className="portrait-outline"></div>
                                     <div className="portrait-wrapper">
-                                        <img src="/images/portrait.jpg" alt="..." className="portrait-img"/>
+                                        <img src="/images/portrait.jpg" alt="..." className="portrait-img" />
                                     </div>
                                 </div>
                                 <span className="portrait-label">Портрет</span>
@@ -49,20 +49,20 @@ const Profile = () => {
                                         REST API, робота з базами тощо. В рамках навчання маю досвід в написанні різних
                                         програмних рішень таких як сайти, десктопні програми, ігри, мобільні застосунки.
                                         Працював з проєктуванням UML, розгортанням на Docker, створенням прототипів у
-                                        Figma. Слабкі сторони – фронтенд, дизайн, комунікативні навички. <br/>
-                                        &emsp;З програмуванням познайомився у школі на уроках інформатики. Мова, на якій
-                                        вчився писати код була Pascal. Дуже сподобалось програмувати, запускати й
-                                        тестувати створені програми.
+                                        Figma. Слабкі сторони – фронтенд та вебдизайн.
+                                        З програмуванням познайомився у школі на уроках інформатики. Мова, на якій
+                                        вчився писати код була Pascal.
                                     </p>
                                     <p>
-                                        &emsp; Почало виходити, так і пішов у цьому напрямку. Практичного досвіду над
-                                        реальними проєктами немає. На період навчання в технікумі проходив технологічну
+                                        &emsp; Дуже сподобалось програмувати, запускати й
+                                        тестувати створені програми. Почало виходити, так і пішов у цьому напрямку. Комерційного досвіду над
+                                        реальними проєктами немає. На період навчання в технікумі проходив
                                         практику на підприємстві, де ознайомлювався з ІТ-відділом та виробничими
-                                        процесами. Як результат практики написав 2 рішення - дропшипінгову платформу й
-                                        автомобільний чат-бот. У 2025 проходив ознайомчу практику і як результат написав
-                                        з командою невеликий проєкт. У 2026 році пройшов виробничу практику в компанії.
+                                        процесами. Як результат практики написав 2 рішення. У 2025 році проходив ще одну практику
+                                        і як результат написав
+                                        з командою невеликий проєкт. У 2026 році проходив виробничу практику в ІТ компанії.
                                         В команді написали і захистили проєкт. Маю кілька сертифікатів про проходження
-                                        безплатних курсів та пару проєктів на GitHub.
+                                        безплатних курсів та деякі роботи на GitHub.
                                     </p>
                                     <button className="download-btn" onClick={() => setModalOpen(true)}>
                                         Скачати резюме
@@ -103,6 +103,11 @@ const Profile = () => {
                                             </h3>
                                             <p className="list-item-subtitle">Фаховий молодший бакалавр &bull; 2020 -
                                                 2024</p>
+                                            <p className="list-item-desc">
+                                                Здобув повну загальну середню освіту на базі 11 класів та фахову
+                                                передвищу освіту за освітньо-професійним ступенем фахового молодшого
+                                                бакалавра за спеціальністю Інженерія програмного забезпечення.
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="list-item-right">
@@ -119,7 +124,11 @@ const Profile = () => {
                                                     ДУІКТ
                                                 </abbr>
                                             </h3>
-                                            <p className="list-item-subtitle">Бакалавр &bull; 2024 - наш час</p>
+                                            <p className="list-item-subtitle">Бакалавр &bull; 2024 - 2027</p>
+                                            <p className="list-item-desc">
+                                                Здобуваю вищу освіту за освітнім ступенем бакалавра за спеціальністю
+                                                Інженерія програмного забезпечення.
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="list-item-right">
@@ -140,12 +149,11 @@ const Profile = () => {
                                     <div className="list-item-left">
                                         <span className="list-item-number">01</span>
                                         <div className="list-item-content">
-                                            <h3 className="list-item-title">ПрАТ «ККПК»</h3>
-                                            <p className="list-item-subtitle">Технологічна та переддипломна
-                                                практика &bull; 2024</p>
+                                            <h3 className="list-item-title">ПрАТ ККПК</h3>
+                                            <p className="list-item-subtitle">Практикант &bull; 2024 (2 місяці)</p>
                                             <p className="list-item-desc">
-                                                Проходив технологічну та переддипломну практику. Ознайомлювався з
-                                                IT-відділом підприємства, написав 2 рішення.
+                                                Проходив практику в ІТ-відділі виробничого підприємства. Самостійно
+                                                розробив 2 програмні рішення.
                                             </p>
                                         </div>
                                     </div>
@@ -157,14 +165,28 @@ const Profile = () => {
                                     <div className="list-item-left">
                                         <span className="list-item-number">02</span>
                                         <div className="list-item-content">
-                                            <h3 className="list-item-title">NIX Solutions</h3>
-                                            <p className="list-item-subtitle">Виробнича практика &bull; 2026</p>
+                                            <h3 className="list-item-title">DES Winter School</h3>
+                                            <p className="list-item-subtitle">Практикант &bull; 2025, 2026</p>
                                             <p className="list-item-desc">
-                                                Перебував дистанційно на виробничій практиці. Разом з командою
-                                                розробляли невеликий проєкт за методологією Scrum. Був
-                                                бекенд-розробником у команді, займався серверною частиною програми, і
-                                                трохи зачепив фронтенд-верстку деяких сторінок. Попрацював з GitLab,
-                                                Trello, Java, TypeScript.
+                                                Двічі брав участь в ІТ-інтенсиві Data Engineering and Security, де переймав
+                                                досвід у провідних практиків галузі. Як результат - разом із командою
+                                                розробив та захистив 2 проєкти.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="list-item-right">
+                                        <button className="list-item-btn">Деталі</button>
+                                    </div>
+                                </div>
+                                <div className="list-item">
+                                    <div className="list-item-left">
+                                        <span className="list-item-number">03</span>
+                                        <div className="list-item-content">
+                                            <h3 className="list-item-title">NIX Solutions</h3>
+                                            <p className="list-item-subtitle">Стажування &bull; 2026 (1 місяць)</p>
+                                            <p className="list-item-desc">
+                                                Стажувався у ІТ компанії в онлайн
+                                                форматі, де з командою працювали за Scrum та розробили проєкт.
                                             </p>
                                         </div>
                                     </div>
@@ -183,31 +205,45 @@ const Profile = () => {
                             </div>
                             <div className="skills-bento-grid">
                                 <div className="bento-box tech-skills-box">
-                                    <h3 className="bento-title">Технології</h3>
+                                    <h3 className="bento-title">Технічний стек</h3>
                                     <div className="skills-chips">
-                                        <span className="skill-chip">Java (OOP, Core)</span>
-                                        <span className="skill-chip">C# (.NET)</span>
-                                        <span className="skill-chip">Python (базово)</span>
-                                        <span className="skill-chip">JavaScript / TypeScript (базово)</span>
+                                        <span className="skill-chip">Java</span>
+                                        <span className="skill-chip">C#</span>
+                                        <span className="skill-chip">JavaScript / TypeScript</span>
+                                        <span className="skill-chip">Python</span>
+                                        <span className="skill-chip">Kotlin</span>
+                                        <span className="skill-chip">Figma</span>
+                                        <span className="skill-chip">Spring Boot (Data, Security)</span>
+                                        <span className="skill-chip">Hibernate / JPA</span>
+                                        <span className="skill-chip">ASP.NET / Razor</span>
+                                        <span className="skill-chip">Entity Framework</span>
+                                        <span className="skill-chip">Node.js / Express</span>
+                                        <span className="skill-chip">Django</span>
+                                        <span className="skill-chip">PostgreSQL</span>
+                                        <span className="skill-chip">MySQL</span>
+                                        <span className="skill-chip">Firebase</span>
+                                        <span className="skill-chip">Android SDK</span>
+                                        <span className="skill-chip">Flutter</span>
+                                        <span className="skill-chip">WPF / WinForms</span>
+                                        <span className="skill-chip">JavaFX</span>
+                                        <span className="skill-chip">REST API</span>
+                                        <span className="skill-chip">OOP</span>
+                                        <span className="skill-chip">MVC / MVVM</span>
+                                        <span className="skill-chip">Git (GitHub, GitLab)</span>
                                         <span className="skill-chip">Docker</span>
-                                        <span className="skill-chip">Postman, Swagger</span>
-                                        <span className="skill-chip">OOP, REST, MVC</span>
-                                        <span className="skill-chip">Android (Java, Kotlin, Flutter)</span>
-                                        <span className="skill-chip">Spring Boot, MVC, Hibernate/JPA</span>
-                                        <span className="skill-chip">MVVM, WPF, WinForms, JavaFX, Razor</span>
-                                        <span className="skill-chip">PostgreSQL, MySQL, Firebase</span>
-                                        <span className="skill-chip">git, GitLab/GitHub</span>
-                                        <span className="skill-chip">Figma, Bootstrap</span>
-                                        <span className="skill-chip">HTML, CSS</span>
+                                        <span className="skill-chip">Postman / Swagger</span>
+                                        <span className="skill-chip">HTML / CSS</span>
+                                        <span className="skill-chip">Bootstrap</span>
                                     </div>
-                                    <h3 className="bento-title" style={{marginTop: '30px'}}>Особисті якості</h3>
+                                    <h3 className="bento-title" style={{ marginTop: '30px' }}>Особисті якості</h3>
                                     <div className="skills-chips">
-                                        <span className="skill-chip">Командна робота</span>
-                                        <span className="skill-chip">Комунікабельність</span>
-                                        <span className="skill-chip">Вирішення проблем (Problem-solving)</span>
-                                        <span className="skill-chip">Адаптивність</span>
+                                        <span className="skill-chip">Командна робота (Scrum)</span>
+                                        <span className="skill-chip">Аналітичне мислення (problem-solving)</span>
+                                        <span className="skill-chip">Швидке засвоєння нових технологій</span>
+                                        <span className="skill-chip">Самостійність та відповідальність</span>
+                                        <span className="skill-chip">Адаптивність (гнучкість до стеку)</span>
                                         <span className="skill-chip">Тайм-менеджмент</span>
-                                        <span className="skill-chip">Відповідальність</span>
+                                        <span className="skill-chip">Висока працездатність</span>
                                         <span className="skill-chip">Бажання вчитися</span>
                                     </div>
                                 </div>
@@ -217,7 +253,7 @@ const Profile = () => {
                                         <div className="languages-list">
                                             <div className="lang-item">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png"
-                                                     alt="..." className="flag-icon"/>
+                                                    alt="..." className="flag-icon" />
                                                 <div className="lang-text">
                                                     <span className="lang-name">Українська</span>
                                                     <span className="lang-level">Рідна</span>
@@ -225,11 +261,11 @@ const Profile = () => {
                                             </div>
                                             <div className="lang-item">
                                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png"
-                                                     alt="..." className="flag-icon"/>
+                                                    alt="..." className="flag-icon" />
                                                 <div className="lang-text">
                                                     <span className="lang-name">Англійська</span>
                                                     <span
-                                                        className="lang-level">Обмежений рівень (достатній для роботи)</span>
+                                                        className="lang-level">Обмежений рівень володіння (достатній для роботи)</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +281,7 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
-                <PageFooter/>
+                <PageFooter />
                 <div className={`modal${modalOpen ? ' show' : ''}`} onClick={closeOnBackdrop}>
                     <div className="modal-content">
                         <span className="close-button" onClick={() => setModalOpen(false)}>
@@ -255,12 +291,12 @@ const Profile = () => {
                         <div className="language-options">
                             <a href="/docs/Резюме.pdf" download="Резюме.pdf" className="language-option">
                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009737.png" alt="..."
-                                     className="flag-icon"/>
+                                    className="flag-icon" />
                                 <span>Українська</span>
                             </a>
                             <a href="/docs/Resume.pdf" download="Resume.pdf" className="language-option">
                                 <img src="https://cdn-icons-png.flaticon.com/128/14009/14009732.png" alt="..."
-                                     className="flag-icon"/>
+                                    className="flag-icon" />
                                 <span>Англійська</span>
                             </a>
                         </div>
